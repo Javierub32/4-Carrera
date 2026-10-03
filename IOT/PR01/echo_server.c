@@ -129,6 +129,7 @@ int main(void)
 		}
 	}
 
+
         close(conn_fd);
         printf("server: client disconnected\n\n");
         fflush(stdout);
