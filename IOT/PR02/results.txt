@@ -1,0 +1,49 @@
+The explanation of each stage is in the handwritten page .
+
+STAGE 1:
+
+javierub@DESKTOP-CHBPSS9$ ./P2_conc_client 127.0.0.1 9100 &
+./P2_conc_client 127.0.0.1 9100 &
+wait
+[1] 57185
+[2] 57186
+client: hello, you are client number 1
+client: hello, you are client number 2
+client: goodbye
+client: finished in 6.00 seconds
+client: goodbye
+client: finished in 6.00 seconds
+[1]-  Done                    ./P2_conc_client 127.0.0.1 9100
+[2]+  Done                    ./P2_conc_client 127.0.0.1 9100
+
+
+server: listening on port 9100, my process number is 57120
+server: client 1 connected from 127.0.0.1
+server: client 2 connected from 127.0.0.1
+server: child 57187 finished with client 1
+server: child 57188 finished with client 2
+
+
+STAGE 2:
+
+Clients at once		Slowest client time		Server processes
+1					6 s						2
+2					6 s						3
+3					6 s						4
+
+
+STAGE 3:
+
+TEST1:
+
+The server replies to both even though one of them terminates immediately because we ignored the SIGPIPE.
+
+
+TEST2:
+
+After the 3 clients finish, “pggrep -c -x P2_conc_server” shows 4 processes, which makes sense because we have the server plus the 3 children in z state.
+
+
+TEST3:
+
+After killing one child while it’s waiting for its reponse, the server doesn’t print “child X finished with client Y” but it is still accepting new clients because we only kill the child, not the parent.
