@@ -1,0 +1,1535 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+agentesolitario/
+  Abiertos.java
+  AgenteSolitario.java
+  ArbolGenerico.java
+  NodoA.java
+  NodoBasico.java
+jarras/
+  agenteJarras.java
+  Jarras.java
+  TestJarras.java
+mundosolitario/
+  OverrideHashCode.java
+  RepresentacionEstado.java
+  RepresentacionEstadoOptimizacion.java
+pancakes/
+  AgentePancakes.java
+  Pancakes.java
+  TestPancakes.java
+puzzle8/
+  AgentePuzzleBDP.java
+  AgentePuzzleH0.java
+  Puzzle.java
+  TestPuzzle.java
+ags.ucls
+Downloads.iml
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="agentesolitario/Abiertos.java">
+package agentesolitario;
+
+import java.util.PriorityQueue;
+
+import mundosolitario.RepresentacionEstadoOptimizacion;
+
+/**
+ * "Lista" de nodos ABIERTOS para el algoritmo A*, implementada mediante una cola con prioridad.
+ * Incluye una clase interior que implementa los nodos guardados en la PriorityQueue.
+ * 
+ * @author Lorenzo Mandow
+ * @version 2018-10-03
+
+ */
+
+public class Abiertos<E extends RepresentacionEstadoOptimizacion<E>> {
+	PriorityQueue<NodoAB> abiertos; //"Lista" de Abiertos
+    
+	/**
+	 * Nodos a guardar en la lista de Abiertos. Están formados por un estado n y sus valor de f(n) y g(n).
+	 * 
+	 * El valor numérico es una estimación heurística de coste, f(n). El "orden natural" de los objetos NodoPQ será por orden
+	 * creciente de f(n). En caso de empate en el valor de f(n), se desempata por mayor valor de g(n).
+	 *
+	 * El estado en principio debería aparecer una única vez en la lista, por lo que el método de comparación "equals"
+	 * tiene en cuenta sólo este componente del NodoPQ para las comparaciones de igualdad.
+	 * 
+	 * El orden definido por compareTo y equals es por tanto inconsistente desde un punto de vista formal, ya que objetos
+	 * que sean equals pueden ser uno mayor que otro (o viceversa). Sin embargo, esta situación nunca se dará en una lista
+	 * de nodos Abiertos bien gestionada al no generarse nunca duplicidades de estados en la misma.
+	 */
+	public class NodoAB implements Comparable<NodoAB>
+
+	{
+		private int f;      //prioridad (estimación de coste)
+		private int g;	    //prioridad secundaria (coste real acumulado)
+	    private E estado;   //estado
+	    
+
+	    public NodoAB(int f, int g, E e) {
+	        this.f = f;
+	        this.g = g;
+	        this.estado = e;
+	    }
+
+	    public int getF()  {
+	        return this.f;
+	    }
+	    
+	    public int getG() {
+	    	return this.g;
+	    }
+	    
+	    public E getEstado() {
+	        return this.estado;
+	    }
+	    
+	    /**
+	     * Orden natural por valor creciente de f. En caso de empate se considera
+	     * más prioritario el de mayor valor de g.
+	     */
+	    @Override
+	    public int compareTo(Abiertos<E>.NodoAB e) {
+	    	if (this.f == e.getF()){
+	    		return e.getG() - this.getG();   //mejor cuanto mayor g
+	    	} else {
+		    	return this.f - e.getF();	     //mejor cuanto menor f
+	    	}
+	    }
+
+	    /**
+	     * Método generado automáticamente con Eclipse
+	     */
+	    
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			NodoAB other = (NodoAB) obj;
+			if (estado == null) {
+				if (other.estado != null)
+					return false;
+			} else if (!estado.equals(other.estado))
+				return false;
+			return true;
+		}
+	}
+	/////////////////////////////////////////////////////////////////////////////////
+	
+	/**
+	 * Crea una lista de Abiertos que inicialmente contiene el estado e con valor f y g.
+	 * @param f Valor de f(n)
+	 * @param g Valor de g(n)
+	 * @param e Estado
+	 */
+	public Abiertos(int f, int g, E e){
+		this.abiertos = new PriorityQueue<>();
+		this.abiertos.offer(new NodoAB(f, g, e));
+	}
+	
+	/**
+	 * @return true si la lista está vacía, false en otro caso.
+	 */
+	public boolean isEmpty(){
+		return this.abiertos.peek() == null;
+	}
+	
+	/**
+	 * @return El primer estado de la lista, borrándolo de la misma. Genera un error si la lista está vacía.
+	 */
+	public E poll(){
+		return this.abiertos.poll().getEstado();
+	}
+	
+	/**
+	 * Elimina el estado e de la lista, independientemente de su valor de f(n)
+	 */
+	public void remove (E e){
+		//El valor de f o g correspondiente al estado e es indiferente, ya que
+		//el método equals de los NodoAB está definido únicamente sobre el estado.
+		this.abiertos.remove(new NodoAB(0, 0, e));
+	}
+	
+	/**
+	 * Inserta el estado e en la lista con el valor f indicado. Para una correcta
+	 * gestión de la lista, no debería llamarse NUNCA a este método de modo que pueda
+	 * haber estados repetidos en la misma (debe llamarse a remove previamente).
+	 * @param f
+	 * @param e
+	 */
+	public void offer(int f, int g, E e){
+		abiertos.offer(new NodoAB(f, g, e));
+	}
+}
+</file>
+
+<file path="agentesolitario/AgenteSolitario.java">
+package agentesolitario;
+
+import java.util.LinkedList;
+import java.util.List;
+
+import mundosolitario.OverrideHashCode;
+import mundosolitario.RepresentacionEstadoOptimizacion;
+
+
+/**
+ * Agente para resolver problemas definidos sobre el espacio de estados implícito en la clase E.
+ * 
+ * Para crear un problema hay que proporcionar el estado de salida, y un método que compruebe la
+ * condición objetivo (esFinal).
+ * 
+ * La solución corresponderá a una secuencia válida de estados en el espacio de estados
+ * definido por E, desde el estado de salida hasta otro final (que cumpla la condición
+ * objetivo).
+ * 
+ * @author Lorenzo Mandow (2018), Jose Miguel Horcas Aguilera (2009)
+ * @version 2018-10-02
+ */
+public abstract class AgenteSolitario<E extends OverrideHashCode & RepresentacionEstadoOptimizacion<E>> { 
+	public E salida;
+    
+	/**
+	 * Guarda el estado de salida.
+	 * @param e estado de salida
+	 */
+    protected AgenteSolitario(E e){
+    	this.salida = e;
+    }
+    
+    /**
+     * Comprueba la condición objetivo para el estado e.
+     * @return true si el argumento es un estado objetivo, false en otro caso.
+     */
+    public abstract boolean esFinal(E e);
+    
+   /**
+     * Función heurística cuyo valor por defecto corresponde a una búsqueda a ciegas.
+     *
+     * @param  e   un estado
+     * @return     0
+     */
+    public int h(E e)
+    {
+        return 0;
+    }
+
+       
+    /*******************************************************************************************
+     * Búsqueda a ciegas primero en amplitud.
+     * 
+     * @return Lista de estados del camino solución, o null si no se encontró solución.
+     */
+       
+    public LinkedList<E> amplitud (){
+        E e = this.salida;
+        ArbolGenerico<E, NodoBasico<E>> a = new ArbolGenerico<>();
+        a.put(e, new NodoBasico<E>(null));
+    
+        LinkedList<E> abiertos = new LinkedList<E>();
+        
+               
+        while (e!=null && !this.esFinal(e)) {
+            for (E e2 : (List<E>)e.calculaSucesores()){//lista) {//Ettado.hijos()) {
+                if (!a.contains(e2)) {
+                    abiertos.offer(e2);
+                    a.put(e2, new NodoBasico<E>(e));
+                }//if
+            }//for
+            e = abiertos.poll();
+        }//while
+
+        if (e==null) {
+            return null;
+        } else {
+            return (LinkedList<E>)a.recuperaSolucion(e);
+        }//if e
+    }
+    
+    /**
+     * Algoritmo A* con heuristico monotono (consistente).
+     * 
+     * @return  Lista de estados del camino solución, o null si no se encontró solución.
+     */
+    public List<E> aMono() {
+        E e = this.salida;
+        ArbolGenerico<E, NodoA<E>> arbol = new ArbolGenerico<>();   //Arbol de búsqueda
+        
+        arbol.put(e, new NodoA<E>(null,0));
+        
+        Abiertos<E> abiertos = new Abiertos<>(this.h(e), 0, e);      //"Lista" de abiertos
+        boolean exito = false;  //será true si se encontró solución
+        int gNuevo;
+        int it = 0;    //contador de expansiones
+        
+        while (!abiertos.isEmpty()){ 
+        	e = abiertos.poll();
+        	if(this.esFinal(e)){ 
+        		exito = true;
+        		break;}    //Fin con éxito
+        	it++;
+            for (E e2 : (List<E>)e.calculaSucesores()){
+                gNuevo =  arbol.get(e).getG() + e.costeArco(e2); 
+                if (!arbol.contains(e2) || gNuevo < arbol.get(e2).getG()) {
+                    if (arbol.contains(e2)) {
+                        abiertos.remove(e2);
+                    }
+                    abiertos.offer(gNuevo + this.h(e2), gNuevo, e2);   
+                    arbol.put(e2, new NodoA<E>(e, gNuevo));
+                }//if !a
+            }//for e2
+        }//while
+        
+        if (!exito) {
+            return null;
+        } else {
+            List<E> solucion = arbol.recuperaSolucion(e);
+            System.out.println("Nodos expandidos: " + it);
+            System.out.println("Longitud de la solucion: " + solucion.toArray().length);
+            System.out.println("Coste de la solucion: " + arbol.get(e).getG());
+            return solucion;
+        }//if !exito
+    }
+
+    
+    /**
+     * Búsqueda con retroceso con profundidad acotada.
+     * 
+     * @param cota Profundidad maxima, tomando como 0 la profundidad de la raíz.
+     * @return Lista de estados del camino solución, o null si no se encontró solución.
+     */
+    public List<E> backtrackC(int cota) {
+        return backtrackC(this.salida, cota, 0);
+    }
+
+    /**
+     * @param e     Estado.
+     * @param cota  Profundidad máxima.
+     * @param prof  Profundidad actual.
+     */
+    private List<E> backtrackC(E e, int cota, int prof) {
+        List<E> res = new LinkedList<E>();
+        
+        if (this.esFinal(e)) {
+            res.add(0, e);
+            return res;
+        } else if (prof >= cota) {
+            return null;                                // poda
+        } else {
+            for (E e2 : (List<E>)e.calculaSucesores()){ 
+                res = backtrackC(e2, cota, prof+1);
+                if (res != null) {
+                    res.add(0, e);
+                    return res;
+                }
+            }
+            return null;
+        }
+    }   
+    
+    /**
+     * Algoritmo Backtrack Iterative Deepening.
+     * 
+     * @return      Lista de estados del camino solución.
+     */
+    
+    public List<E> bid() {
+        return bid(this.salida, 0);
+    }
+    
+    /**
+     * @param e     Estado de salida.
+     * @param cota  Profundidad de la búsqueda inicial.
+	 */
+    
+    private List<E> bid(E e, int cota) {
+        List<E> res;
+                
+        res =  this.backtrackC(cota);
+        if (res != null) {
+            return res;
+        } else {
+            return bid(e, cota+1);
+        }
+    }
+  
+}
+</file>
+
+<file path="agentesolitario/ArbolGenerico.java">
+package agentesolitario;
+
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+
+import mundosolitario.RepresentacionEstado;
+
+
+/**
+ *
+ * Arbol de busqueda genérico que encapsula un HashMap.
+ * 
+ * Cada nodo corresponde a un estado de tipo E, y para el mismo se
+ * guarda un conjunto de información de tipo N, que incluirá al menos la referencia al padre.
+ * Internamente se asocia cada estado con su nodo mediante un HashMap. 
+ * 
+ * El padre de un nodo raíz debe ser null.
+ *
+ * @authors Lorenzo Mandow (2018)
+ * 
+ * version 2018-10-02
+ */
+
+public class ArbolGenerico<E extends RepresentacionEstado<E>, N extends NodoBasico<E>> {
+
+    private HashMap<E,N> tabla;
+    
+    public ArbolGenerico() {
+        this.tabla = new HashMap<E, N>();
+    }
+   
+    /**
+     * Inserta en el árbol el estado e con la información del nodo n. Esta
+     * operación destruye cualquier otra aparición previa del estado e en el
+     * árbol.
+     * 
+     * @param e Un estado
+     * @param n Un nodo con la información del estado
+     */
+    public void put(E e, N n) {
+        tabla.put(e, n);
+    }
+
+    public boolean contains(E e) {
+        return tabla.containsKey(e);
+    }
+    
+    public N get(E e) {
+        return tabla.get(e);
+    }
+
+    /**
+     * @param e  un estado que debe estar contenido obligatoriamente en el árbol.
+     * @return lista de estados en el árbol desde el estado e hasta uno raíz (su padre es null).
+     */
+    public List<E> recuperaSolucion(E e) {      
+        LinkedList<E> c = new LinkedList<E>();
+        
+        c.add(e);
+        while(!esRaiz(e)){
+        	e = get(e).getPadre();
+        	c.add(e);
+        }//while
+
+        Collections.reverse(c);
+        return c;
+    }
+    
+    /**
+     * @param e un estado
+     * @return true si el estado e es estado raiz del arbol, false en otro caso. 
+     */
+    private boolean esRaiz(E e) {
+    	N info = tabla.get(e);
+        return info != null && info.getPadre()==null; 
+    }
+    
+}
+</file>
+
+<file path="agentesolitario/NodoA.java">
+package agentesolitario;
+
+import mundosolitario.RepresentacionEstadoOptimizacion;
+
+/**
+ * Nodo para un árbol de búsqueda tipo A* que incluye referencia al estado padre y el valor de g(n).
+ * 
+ * @authors Lorenzo Mandow
+ * @version 02-10-2018
+ * 
+ */
+public class NodoA<E extends RepresentacionEstadoOptimizacion<E>> extends NodoBasico<E> {
+
+    private int g;              // g(n) = coste del camino guardado en el árbol desde el nodo a la raíz
+
+    /**
+     * @param p estado padre del NodoA
+     * @param g valor de g(n) del NodoA
+     */
+    public NodoA(E p, int g){
+        super(p);
+        this.g = g;
+    }
+    
+    public int getG(){
+        return g;
+    }
+    
+}
+</file>
+
+<file path="agentesolitario/NodoBasico.java">
+package agentesolitario;
+
+import mundosolitario.RepresentacionEstado;
+
+/**
+ * Nodo para un árbol de búsqueda básico que incluye únicamente una referencia al estado padre (p. ej.
+ * búsqueda en amplitud).
+ * 
+ * @authors Lorenzo Mandow 
+ * @version 02-10-2018
+ * 
+ */
+public class NodoBasico<E extends RepresentacionEstado<E>> {
+
+    private E padre = null;
+
+    /**
+     * @param padre del NodoBasico
+     */
+    public NodoBasico(E p){
+        this.padre = p;
+    }
+
+    public E getPadre(){
+        return padre;
+    }
+    
+}
+</file>
+
+<file path="jarras/agenteJarras.java">
+package jarras;
+
+import agentesolitario.AgenteSolitario;
+
+public class agenteJarras extends AgenteSolitario<Jarras> {
+
+
+    /**
+     * Guarda el estado de salida.
+     *
+     * @param jarras estado de salida
+     */
+    protected agenteJarras(Jarras jarras) {
+        super(jarras);
+    }
+
+    @Override
+    public boolean esFinal(Jarras jarra) {
+        return jarra.p == 1;
+    }
+}
+</file>
+
+<file path="jarras/Jarras.java">
+package jarras;
+
+import mundosolitario.OverrideHashCode;
+import mundosolitario.RepresentacionEstadoOptimizacion;
+import puzzle8.Puzzle;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Jarras extends OverrideHashCode implements RepresentacionEstadoOptimizacion<Jarras> {
+    public int g; // Contenido jarra grande
+    public int p; // Contenido jarra pequeña
+
+    final static int MAXP = 2;
+    final static int MAXG = 5;
+
+    public Jarras(int g, int p) {
+        this.g = g;
+        this.p = p;
+    }
+
+    public void ver() {
+        System.out.println("(" + this.g + ", " + this.p + ")");
+    }
+
+    public void verSucesores(Jarras j) {
+        List<Jarras> lista = j.calculaSucesores();
+        System.out.println("La lista de sucesores es:");
+        for(Jarras jarra : lista) {
+            jarra.ver();
+        }
+    }
+
+    @Override
+    public int hashCode() {
+        return 0;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return false;
+    }
+
+    @Override
+    public List<Jarras> calculaSucesores() {
+        List<Jarras> lista = new ArrayList<Jarras>();
+
+        // Descartar contenido de la jarra grande
+        if (this.g > 0) {
+            lista.add(new Jarras(0, this.p));
+        }
+
+        // Descartar contenido de la jarra grande
+        if (this.p > 0) {
+            lista.add(new Jarras(this.g, 0));
+        }
+
+        int total = this.g + this.p;
+
+        // Traspaso de g a p
+        if (this.g > 0 && this.p < MAXP && total <= MAXP) {
+            lista.add(new Jarras(0, total));
+        }
+
+        // Traspaso de p a g
+        if (this.p > 0 && this.g < MAXG && total <= MAXG) {
+            lista.add(new Jarras(total, 0));
+        }
+
+        // Traspase parcial ARREGLAR
+        if (this.g > 0 && this.p < MAXP) {
+            int cantidad = Math.min(this.g, MAXP - this.p);
+            lista.add(new Jarras(this.g - cantidad, this.p + cantidad));
+        }
+
+        if (this.p > 0 && this.g < MAXG) {
+            int cantidad = Math.min(this.p, MAXG - this.g);
+            lista.add(new Jarras(this.g + cantidad, this.p - cantidad));
+        }
+
+
+        return lista;
+    }
+
+    @Override
+    public int costeArco(Jarras eDestino) {
+        return 1;
+    }
+
+}
+</file>
+
+<file path="jarras/TestJarras.java">
+package jarras;
+
+import java.util.List;
+
+public class TestJarras {
+    public static void main(String[] args) {
+        Jarras jj = new Jarras(5,0);
+        jj.ver();
+
+        jj.verSucesores(jj);
+
+        agenteJarras ag = new agenteJarras(jj);
+        List<Jarras> solucion = ag.amplitud();
+        System.out.println("Solucion");
+        for(Jarras j : solucion){
+            j.ver();
+        }
+    }
+}
+</file>
+
+<file path="mundosolitario/OverrideHashCode.java">
+package mundosolitario;
+
+/**
+ * Clase abstracta para recordar la redefinición del método hashCode y, en consecuencia,
+ * el método equals.
+ * 
+ * @author Lorenzo Mandow
+ *
+ */
+public abstract class OverrideHashCode {
+	
+	 /**
+     * Forzamos la re-definición de hashCode y, en consecuencia, de equals.
+     * Si dos objetos son equals, deben proporcionar el mismo hashCode.
+     * 
+     * El método hashCode es importante para métodos de resolución de
+     * problemas que usen tablas hash indexadas con las representaciones de estados
+     * (por ejemplo, implementaciones de A*).
+     */
+    public abstract int hashCode ();
+    public abstract boolean equals(Object obj);
+
+}
+</file>
+
+<file path="mundosolitario/RepresentacionEstado.java">
+package mundosolitario;
+
+import java.util.List;
+
+/**
+ * Representacion de un estado o situación del mundo
+ * correspondiente a un "mundo de agente solitario" (determinista, totalmente observable,
+ * conocido, y donde el agente resolutor es el único que puede realizar cambios). Por
+ * ejemplo, puzle-8, trasvase entre jarras, o misioneros y caníbales.
+ * 
+ * @author Lorenzo Mandow
+ * @version 02-10-2018
+ */
+public interface RepresentacionEstado<E extends RepresentacionEstado<E>> {
+
+    /**
+     * @return Lista de estados alcanzables en un paso desde este estado. 
+     */
+    public List<E> calculaSucesores();
+    
+}
+</file>
+
+<file path="mundosolitario/RepresentacionEstadoOptimizacion.java">
+package mundosolitario;
+
+/**
+ * Representacion de un estado o situación del mundo
+ * correspondiente a un "mundo de agente solitario" (determinista, totalmente observable,
+ * conocido, y donde el agente resolutor es el único que puede realizar cambios). Por
+ * ejemplo, puzle-8, trasvase entre jarras, o misioneros y caníbales.
+ * 
+ * Incluye el método costeArco para algoritmos de optimización.
+ * 
+ * @author Lorenzo Mandow
+ * @version 04-10-2018
+ */
+public interface RepresentacionEstadoOptimizacion<E extends RepresentacionEstadoOptimizacion<E>> extends RepresentacionEstado<E> {
+
+
+    /** 
+     * @return coste correspondiente al arco entre el estado actual y el recibido
+     * como argumento (se supone que existe tal arco).  
+     */
+
+    public int costeArco(E eDestino);
+    
+}
+</file>
+
+<file path="pancakes/AgentePancakes.java">
+package pancakes;
+
+import agentesolitario.AgenteSolitario;
+
+public class AgentePancakes extends AgenteSolitario<Pancakes> {
+    /**
+     * Guarda el estado de salida.
+     *
+     * @param pancakes estado de salida
+     */
+    protected AgentePancakes(Pancakes pancakes) {
+        super(pancakes);
+    }
+
+    @Override
+    public boolean esFinal(Pancakes pancakes) {
+        for (int i = 0; i < pancakes.lista.size() - 1; i++) {
+            if (pancakes.lista.get(i) > pancakes.lista.get(i + 1)) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+</file>
+
+<file path="pancakes/Pancakes.java">
+package pancakes;
+
+import mundosolitario.OverrideHashCode;
+import mundosolitario.RepresentacionEstadoOptimizacion;
+import puzzle8.Puzzle;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Objects;
+
+public class Pancakes extends OverrideHashCode implements RepresentacionEstadoOptimizacion<Pancakes> {
+    public List<Integer> lista;
+
+    public Pancakes(List<Integer> lista) {
+        this.lista = lista;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Pancakes pancakes = (Pancakes) o;
+        return Objects.equals(lista, pancakes.lista);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(lista);
+    }
+
+    @Override
+    public int costeArco(Pancakes eDestino) {
+        return 1;
+    }
+
+    public List<Pancakes> calculaSucesores2() {
+        List<Pancakes> sucesores = new ArrayList<Pancakes>();
+
+        for (int i = 0; i < this.lista.size() - 1; i++) {
+            List<Integer> sucesor = new ArrayList<>();
+            for (int j = 0; j < this.lista.size(); j++) {
+                if (j == i) {
+                    sucesor.add(this.lista.get(j + 1));
+                    sucesor.add(this.lista.get(j));
+                    j++;
+                } else {
+                    sucesor.add(this.lista.get(j));
+                }
+            }
+            Pancakes pancake = new Pancakes(sucesor);
+            sucesores.add(pancake);
+        }
+
+        return sucesores;
+    }
+
+    @Override
+    public List<Pancakes> calculaSucesores() {
+        List<Pancakes> sucesores = new ArrayList<Pancakes>();
+
+        for (int i = 1; i < this.lista.size() - 1; i++) {
+            List<Integer> sucesor = new ArrayList<>(lista);
+            List<Integer> sucesorAux = new ArrayList<>(lista);
+            Integer tamEspatula = i < this.lista.size() / 2 ? i : this.lista.size() - 1 - i;
+
+            // Mitad izquierda
+            for (int j = i - tamEspatula; j < i; j++) {
+                sucesor.set(j, sucesorAux.get(2 * i - j));
+            }
+
+            // Mitad derecha
+            for (int j = i + 1; j <= i + tamEspatula; j++) {
+                sucesor.set(j, sucesorAux.get(2 * i - j));
+            }
+
+            Pancakes pancake = new Pancakes(sucesor);
+            sucesores.add(pancake);
+        }
+
+        return sucesores;
+    }
+}
+</file>
+
+<file path="pancakes/TestPancakes.java">
+package pancakes;
+
+import jarras.Jarras;
+import jarras.agenteJarras;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class TestPancakes {
+    public static void main(String[] args) {
+        Pancakes pancakes = new Pancakes(new ArrayList<>(List.of(7,3,1,6,2,4,5)));
+
+        AgentePancakes agentePancakes = new AgentePancakes(pancakes);
+        List<Pancakes> solucion = agentePancakes.amplitud();
+        System.out.println("Solución (" + solucion.size() + " movimientos):");
+        for (Pancakes pancake: solucion) {
+            System.out.println(pancake.lista);
+        }
+    }
+}
+</file>
+
+<file path="puzzle8/AgentePuzzleBDP.java">
+package puzzle8;
+
+import java.util.HashMap;
+import java.util.LinkedList;
+/**
+ * Permite resolver el n-puzzle empleando como heuristico una base de datos de patrones (BDP).
+ * La BDP se guarda internamente como una tabla hash de costes indexados por Puzzle.
+ * 
+ * @author Esteban Calderon Pinto, Jose Miguel Horcas Aguilera, Lorenzo Mandow 
+ * @version 2013-10-09
+ */
+public class AgentePuzzleBDP extends AgentePuzzleH0
+{
+    private HashMap<Puzzle, Integer> bdp;
+    //tamaño de tablero y numero de comodines de la actual bdp:
+    private int numFilas = -1;                   
+    private int numCol = -1;
+    private int numComodines = -1;
+    private int numPiezas = -1;
+    private static final int COMODIN = -1;
+    /**
+     * Constructor. Establece el estado de salida del problema y calcula una BDP con el numero de comodines indicado.
+     */
+    public AgentePuzzleBDP(Puzzle p, int comodines){
+        super(p);
+        calculaBDP(comodines);
+    }
+
+    /**
+     * Cambia el estado de salida del problema. Si el tamaño del puzzle no coincide con el anterior,
+     * se invalida la bdp, y será necesario recalcularla de nuevo con calculaBDP.
+     */
+    public void cambiarSalida(Puzzle e) {
+        this.salida = e;
+        if (e.nf() != numFilas || e.nc() != numCol){
+            bdp = null;
+            numFilas = -1;
+            numCol = -1;
+            numComodines = -1;
+            numPiezas = -1;
+        }
+    }
+   
+    
+    /**
+     * Calcula la bdp para un puzzle del tamano del puzzle de salida, y con el numero de
+     * comodines indicado.
+     *
+     * @param  n numero de fichas comodin.
+     */
+    public void calculaBDP(int n)
+    {
+        if (n < 0 || n >= this.salida.nf() * this.salida.nc()){
+            System.out.println("Numero incorrecto de comodines para generar la BDP");
+            return;
+        }
+                
+        int nf = this.salida.nf();
+        int nc = this.salida.nc();
+        int tablero[][] = new int[nf][nc];
+        int cont = 0;
+        this. numPiezas = nf * nc - n;  //total de piezas menos el numero de comodines
+        this.numComodines = n;
+        this.numFilas = nf;
+        this.numCol = nc;
+        
+        // Calculamos un patron con el numero de piezas adecuado: 
+              
+        for (int i = 0; i < nf; i++) {
+            for (int j = 0; j < nc; j++) {
+                if (cont < numPiezas){
+                    tablero[i][j] = cont;
+                }else {
+                    tablero[i][j] = COMODIN;}
+                cont += 1;
+            }
+        }
+        Puzzle patron = new Puzzle(tablero, 0, 0);
+        
+        // Calculamos la base de datos de patrones partiendo del patron. Aprovechamos el hecho de que al ser los costes 1, siempre que
+        // encontramos un puzzle nuevo, hemos encontrado ya el camino optimo hasta el.
+        
+        this.bdp = new HashMap<Puzzle, Integer>();
+        LinkedList<Puzzle> abiertos = new LinkedList<Puzzle>();
+        int g2;
+        Puzzle e = patron;
+        bdp.put(e,0);
+        
+        int it = 0;
+        
+        while (e != null) {
+            for (Puzzle e2 : e.calculaSucesores()) {
+                if (!bdp.containsKey(e2)) {
+                    g2 = bdp.get(e) + e.costeArco(e2);
+                    abiertos.offer(e2);
+                    bdp.put(e2, g2);
+                }
+            }
+            e = abiertos.poll();
+            it += 1;
+        }
+        
+        System.out.println("Entradas en la tabla: " + it);
+        
+    }
+       
+    /**
+     * Funcion heuristica que construye un patron a partir del puzzle y
+     * consulta el contenido asociado en la base de datos de patrones.
+     *
+     * @param  p el puzzle cuyo heuristico se va a devolver.
+     * @return estimacion del coste de llegar desde p al objetivo, consultado en la 
+     *         base de datos de patrones.
+     */
+    @Override
+    public int h (Puzzle p)
+    {
+        int[][] tablero = new int[numFilas][numCol];
+        
+        for (int i = 0; i < numFilas; i++) {
+            for (int j = 0; j < numCol; j++) {
+                if (p.tab[i][j] < numPiezas){
+                    tablero[i][j] = p.tab[i][j];
+                }else {
+                    tablero[i][j] = COMODIN;}
+            }
+        }
+        
+        //la posicion del hueco es irrelevante para el calculo del hashCode.
+        if (bdp.get(new Puzzle(tablero, 0, 0)) == null){  // el puzzle no esta en la tabla, por tanto es inaccesible desde el estado inicial.
+            System.out.println("No esta en la tabla");
+            return 0; 
+        } else {
+            return bdp.get(new Puzzle(tablero, 0, 0));
+        }
+    }
+
+}
+</file>
+
+<file path="puzzle8/AgentePuzzleH0.java">
+package puzzle8;
+
+import agentesolitario.AgenteSolitario;
+import puzzle8.Puzzle;
+
+/**
+ * Problema del N- puzzle 8 con estado objetivo ordenado. Ejemplo para puzzle 8:
+ *   0 1 2
+ *   3 4 5
+ *   6 7 8
+ *   
+ *   
+ * 
+ * @author Lorenzo Mandow 
+ * @version 2013-10-08  // 02-10-2018
+ */
+public class AgentePuzzleH0 extends AgenteSolitario<Puzzle>{
+    /**
+     * Constructor for objects of class ProbPuzzleH0
+     */
+    public AgentePuzzleH0(Puzzle p)
+    {
+        super(p);
+    }
+
+    /**
+     * @return     verdadero si las fichas estan ordenadas por filas de
+     *             izquierda a derecha y de arriba hacia abajo, empezando
+     *             por el hueco (0).
+     */
+    @Override
+    public boolean esFinal(Puzzle e){
+
+    	int cont = 0;
+
+        for (int i = 0; i < e.tab.length; i++) {
+            for (int j = 0; j < e.tab[0].length; j++) {
+                if (e.tab[i][j] != cont) {
+                    return false;
+                } else {
+                    cont++;
+                }
+            }
+        }
+
+        return true;
+    }
+}
+</file>
+
+<file path="puzzle8/Puzzle.java">
+package puzzle8;
+
+import java.util.*;
+
+import mundosolitario.OverrideHashCode;
+import mundosolitario.RepresentacionEstadoOptimizacion;
+
+/**
+ * Puzzle 2D de piezas deslizantes.
+ * 
+ * @authors Esteban Calderon Pinto, Jose Miguel Horcas Aguilera, Lorenzo Mandow
+ *
+ * @version 2013-10-08 // 2018
+ */
+public class Puzzle extends OverrideHashCode implements RepresentacionEstadoOptimizacion<Puzzle> {
+
+	int [][] tab;           // Tablero.
+    int fh;                 // Fila del hueco.
+    int ch;                 // Columna del hueco.
+
+
+	/**
+     * Contructor privado que utilizaremos internamente.
+     *
+     * @param tablero: tablero con el que se inicializara el tablero.
+     */
+    
+    public Puzzle (int[][] tablero) {
+        this.tab = new int[tablero.length][tablero[0].length];
+        this.copiarTablero(tablero);
+        this.encuentraHueco();
+    }
+
+    /**
+     * Constructor para el usuario.
+     * @param nFilas    Numero de filas del tablero.
+     * @param cColumnas Numero de columnas del tablero.
+     */
+    public Puzzle (int nFilas, int nColumnas) {
+        this.tab = new int[nFilas][nColumnas];
+        Scanner sc = new Scanner(System.in);
+
+        sc.useDelimiter("[:\\s]");
+        System.out.println("Introduzca las fichas separadas por espacios");
+        System.out.println("Represente el hueco con un 0");
+        System.out.println("Ejemplo: 1 2 0 3 4 5 6 7 8\representa\n1 2 0\n3 4 5\n6 7 8\n:");
+        for (int i = 0; i < nFilas; i++) {
+            for (int j = 0; j < nColumnas; j++) {
+                this.tab[i][j] = sc.nextInt();
+            }//for j
+        }//for i
+        sc.close();
+        this.encuentraHueco();
+    }
+
+    /**
+     * Constructor.
+     * Construye un nuevo puzzle dado el tablero y la posicion del hueco.
+     * @param tablero       Tablero.
+     * @param filaHueco     Fila del hueco.
+     * @param columnaHueco  Columna del hueco.
+     */
+    public Puzzle (int[][] tablero, int filaHueco, int columnaHueco) {
+        this.tab = new int[tablero.length][tablero[0].length];
+        this.copiarTablero(tablero);
+        this.fh = filaHueco;
+        this.ch = columnaHueco;
+    }
+    
+    private void copiarTablero (int[][] tablero) {      
+        for (int i = 0; i < tablero.length; i++) {
+            for (int j = 0; j < tablero[i].length; j++) {
+                this.tab[i][j] = tablero[i][j];
+            }//for j
+        }//for i
+    }
+    
+    /**
+     * Metodo que encuentra el hueco en el tablero e inicializa las variables fh y ch.
+     */
+    private void encuentraHueco() {
+        for (int i = 0; i < tab.length; i++) {
+            for (int j = 0; j < tab[0].length; j++) {
+                if (tab[i][j] == 0) {
+                    this.fh = i;
+                    this.ch = j;
+                    return;
+                }//if
+            }//for j
+        }//for i
+    }
+
+    /**
+     * Metodo de consulta de la variable fh.
+     *
+     * @return la fila del hueco
+     */
+    public int fh() {
+        return fh;
+    }
+
+    /**
+     * Metodo de consulta de la variable ch.
+     *
+     * @return la columna del hueco
+     */
+    public int ch() {
+        return ch;
+    }
+
+    /**
+     *
+     * @return numero de filas del tablero.
+     */
+    public int nf() {
+        return tab.length;
+    }
+
+    /**
+     * 
+     * @return numero de columnas del tablero.
+     */
+    public int nc() {
+        return tab[0].length;
+    }
+   
+    /**
+     * Intercambia los contenidos de las posiciones (f,c) y (nf,nc)
+     * @param f
+     * @param c
+     * @param nf
+     * @param nc
+     */
+    protected void permutaPosicion(int f, int c, int nf, int nc) {
+        int aux;
+        
+        aux = tab[f][c];
+        tab[f][c] = tab[nf][nc];
+        tab[nf][nc] = aux;
+        
+        ch = nc;
+        fh = nf;
+    }
+
+    /**
+     * 
+     * @param f
+     * @param c
+     * @return Cierto si (f,c) es una posicion del puzzle
+     */
+    protected boolean posicionValida(int f, int c) {
+        return (f < tab.length) && (0 <= f) && (c < tab[0].length) && (0 <= c);
+    }
+    
+    /**
+     * @return Una lista con todos los puzzles directamente accesibles desde el actual
+     * en un movimiento.
+     */
+    @Override
+    public List<Puzzle> calculaSucesores() {
+
+        List<Puzzle> h = new ArrayList<Puzzle>();
+        Puzzle p;
+        int f = fh;
+        int c = ch;
+        
+        if (this.posicionValida(f, c+1)) {
+            p = new Puzzle(tab,f,c);
+            p.permutaPosicion(f, c, f, c+1);
+            h.add(p);
+        }
+
+        if (this.posicionValida(f, c-1)) {
+            p = new Puzzle(tab,f,c);
+            p.permutaPosicion(f, c, f, c-1);
+            h.add(p);
+        }
+
+        if (this.posicionValida(f+1, c)) {
+            p = new Puzzle(tab,f,c);
+            p.permutaPosicion(f, c, f+1, c);
+            h.add(p);
+        }
+
+        if (this.posicionValida(f-1, c)) {
+            p = new Puzzle(tab,f,c);
+            p.permutaPosicion(f, c, f-1, c);
+            h.add(p);
+        }
+
+        return h;
+    }
+    
+    /**
+     * @return Cadena que representa unívocamente cada puzzle
+     */
+    @Override
+    public String toString () {
+        StringBuilder b = new StringBuilder();
+        
+        b.append("\n");
+
+        for (int i = 0; i < tab.length; i++) {
+            for (int j = 0; j < tab[0].length; j++) {
+               b.append(tab[i][j]);
+               b.append(" ");
+          }
+            b.append("\n");
+        }
+        
+        return b.toString();
+    }
+    
+    /**
+     * Muestra de forma legible un puzzle por pantalla.
+     */
+    public void ver () {
+    	System.out.println(this.toString());
+    }
+
+    @Override
+	public int costeArco(Puzzle e2) {
+		return 1;
+	}
+	
+	/**
+	 * Ignoramos fh y ch en el cálculo del hashCode, pues el estado
+	 * viene definido ya por el tablero. Esto es coherente con la
+	 * definición de equals.
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + Arrays.deepHashCode(tab);
+		return result;
+	}
+
+	/**
+	 * Ignoramos fh y ch en la comparación de igualdad, pues el estado
+	 * viene definido ya por el tablero.
+	 */
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Puzzle other = (Puzzle) obj;
+		if (!Arrays.deepEquals(tab, other.tab))
+			return false;
+		return true;
+	}
+
+	
+}
+</file>
+
+<file path="puzzle8/TestPuzzle.java">
+package puzzle8;
+
+import java.util.List;
+/**
+ * Pruebas para el puzzle 2D de piezas deslizantes.
+ * 
+ * @Jose Miguel Horcas Aguilera, Lorenzo Mandow
+ *
+ */
+public class TestPuzzle {
+    
+    public static void main(String[] args) {
+    
+    	testH0();
+    	
+    	testDPB();
+    }
+    
+    public static void testH0(){
+    //    Puzzle s = new Puzzle(3,3);
+    	int[][] ttt = {{1,2,0},{3,4,5},{6,7,8}};
+        Puzzle s = new Puzzle(ttt);
+		AgentePuzzleH0 problema = new AgentePuzzleH0(s);
+		
+		List<Puzzle> l =  problema.aMono();
+		
+		if (l != null) {
+			System.out.println("Profundidad de la solucion: " + (l.size()-1));
+            System.out.println("Camino Solucion:");
+            for (Puzzle e : l) {
+               e.ver();
+            }
+        } else {
+            System.out.println("No se ha podido encontrar la Solucion");
+        }        
+	}
+	
+	public static void testDPB() {
+        Puzzle s = new Puzzle(3,3);
+		AgentePuzzleBDP problema = new AgentePuzzleBDP(s, 5);
+		
+		List<Puzzle> l = problema.aMono();
+		
+		if (l != null) {
+			System.out.println("Profundidad de la solucion: " + (l.size()-1));
+            System.out.println("Camino Solucion:");
+            for (Puzzle e : l) {
+               e.ver();
+            }
+        } else {
+            System.out.println("No se ha podido encontrar la Solucion");
+        }        
+	}
+	
+}
+</file>
+
+<file path="ags.ucls">
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.13" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="mundosolitario.OverrideHashCode" project="AgenteSolitario" 
+    file="/AgenteSolitario/src/mundosolitario/OverrideHashCode.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="578" y="129"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="2" language="java" name="mundosolitario.RepresentacionEstado" project="AgenteSolitario" 
+    file="/AgenteSolitario/src/mundosolitario/RepresentacionEstado.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="214" y="119"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="3" language="java" name="mundosolitario.RepresentacionEstadoOptimizacion" project="AgenteSolitario" 
+    file="/AgenteSolitario/src/mundosolitario/RepresentacionEstadoOptimizacion.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="214" y="276"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="4" language="java" name="agentesolitario.AgenteSolitario" project="AgenteSolitario" 
+    file="/AgenteSolitario/src/agentesolitario/AgenteSolitario.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="924" y="129"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="puzzle8.Puzzle" project="AgenteSolitario" 
+    file="/AgenteSolitario/src/puzzle8/Puzzle.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="460" y="619"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="false" package="false" protected="false" private="false" static="true"/>      
+      <operations public="true" package="false" protected="false" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="puzzle8.AgentePuzzleH0" project="AgenteSolitario" 
+    file="/AgenteSolitario/src/puzzle8/AgentePuzzleH0.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="924" y="480"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="puzzle8.AgentePuzzleBDP" project="AgenteSolitario" 
+    file="/AgenteSolitario/src/puzzle8/AgentePuzzleBDP.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="923" y="707"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="false" protected="false" private="false" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <generalization id="8">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="6"/>  
+  </generalization>  
+  <association id="9">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="10" name="salida"/>      
+      <multiplicity id="11" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="12">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="13">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="2"/>  
+  </generalization>  
+  <realization id="14">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="3"/>  
+  </realization>  
+  <generalization id="15">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="4"/>  
+  </generalization>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>
+</file>
+
+<file path="Downloads.iml">
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
+</file>
+
+</files>
