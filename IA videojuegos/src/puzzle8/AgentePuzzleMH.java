@@ -17,9 +17,11 @@ public class AgentePuzzleMH extends AgentePuzzleH0 {
         int colObj = -1;
         for (int i = 0; i < p.numFilas; i++) {
             for (int j = 0; j < p.numCol; j++) {
-                filaObj = p.tab[i][j] / p.numFilas;
-                colObj = p.tab[i][j] % p.numFilas;
-                counter += Math.abs(i - filaObj) + Math.abs(j - colObj);
+                if (p.tab[i][j] != 0) {
+                    filaObj = p.tab[i][j] / p.numFilas;
+                    colObj = p.tab[i][j] % p.numFilas;
+                    counter += Math.abs(i - filaObj) + Math.abs(j - colObj);
+                }
             }
         }
 

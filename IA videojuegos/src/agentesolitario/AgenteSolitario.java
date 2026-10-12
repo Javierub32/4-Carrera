@@ -23,6 +23,7 @@ import mundosolitario.RepresentacionEstadoOptimizacion;
 public abstract class AgenteSolitario<E extends OverrideHashCode & RepresentacionEstadoOptimizacion<E>> { 
 	public E salida;
     public int iteracionesAmplitud;
+    public int iteracionesAMono;
     
 	/**
 	 * Guarda el estado de salida.
@@ -89,6 +90,7 @@ public abstract class AgenteSolitario<E extends OverrideHashCode & Representacio
      * @return  Lista de estados del camino solución, o null si no se encontró solución.
      */
     public List<E> aMono() {
+        iteracionesAMono = 0;
         E e = this.salida;
         ArbolGenerico<E, NodoA<E>> arbol = new ArbolGenerico<>();   //Arbol de búsqueda
         
@@ -105,6 +107,7 @@ public abstract class AgenteSolitario<E extends OverrideHashCode & Representacio
         		exito = true;
         		break;}    //Fin con éxito
         	it++;
+            iteracionesAMono++;
             for (E e2 : (List<E>)e.calculaSucesores()){
                 gNuevo =  arbol.get(e).getG() + e.costeArco(e2); 
                 if (!arbol.contains(e2) || gNuevo < arbol.get(e2).getG()) {
