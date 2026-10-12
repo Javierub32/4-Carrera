@@ -22,6 +22,7 @@ import mundosolitario.RepresentacionEstadoOptimizacion;
  */
 public abstract class AgenteSolitario<E extends OverrideHashCode & RepresentacionEstadoOptimizacion<E>> { 
 	public E salida;
+    public int iteracionesAmplitud;
     
 	/**
 	 * Guarda el estado de salida.
@@ -56,6 +57,7 @@ public abstract class AgenteSolitario<E extends OverrideHashCode & Representacio
      */
        
     public LinkedList<E> amplitud (){
+        iteracionesAmplitud = 0;
         E e = this.salida;
         ArbolGenerico<E, NodoBasico<E>> a = new ArbolGenerico<>();
         a.put(e, new NodoBasico<E>(null));
@@ -64,6 +66,7 @@ public abstract class AgenteSolitario<E extends OverrideHashCode & Representacio
         
                
         while (e!=null && !this.esFinal(e)) {
+            iteracionesAmplitud++;
             for (E e2 : (List<E>)e.calculaSucesores()){//lista) {//Ettado.hijos()) {
                 if (!a.contains(e2)) {
                     abiertos.offer(e2);

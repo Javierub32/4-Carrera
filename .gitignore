@@ -1,1 +1,5 @@
 Papeleo/
+out/
+.idea/
+
+*.iml

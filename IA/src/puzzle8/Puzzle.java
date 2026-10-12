@@ -17,6 +17,8 @@ public class Puzzle extends OverrideHashCode implements RepresentacionEstadoOpti
 	int [][] tab;           // Tablero.
     int fh;                 // Fila del hueco.
     int ch;                 // Columna del hueco.
+    int numFilas;
+    int numCol;
 
 
 	/**
@@ -27,6 +29,8 @@ public class Puzzle extends OverrideHashCode implements RepresentacionEstadoOpti
     
     public Puzzle (int[][] tablero) {
         this.tab = new int[tablero.length][tablero[0].length];
+        this.numFilas = tablero.length;
+        this.numCol = tablero[0].length;
         this.copiarTablero(tablero);
         this.encuentraHueco();
     }
@@ -38,6 +42,8 @@ public class Puzzle extends OverrideHashCode implements RepresentacionEstadoOpti
      */
     public Puzzle (int nFilas, int nColumnas) {
         this.tab = new int[nFilas][nColumnas];
+        this.numFilas = nFilas;
+        this.numCol = nColumnas;
         Scanner sc = new Scanner(System.in);
 
         sc.useDelimiter("[:\\s]");
