@@ -1,0 +1,85 @@
+STAGE 1:
+
+javierub@DESKTOP-CHBPSS9$ mpirun -np 4 ./P3_ring
+type a word and press enter: Hallo
+process 0 sends the word Hallo
+process 1 has the word Hallo
+process 2 has the word Hallo
+the word Hallo came back to process 0, the ring is closed
+process 3 has the word Hallo
+
+
+
+STAGE 2:
+
+before: real 0m2.515s
+after:  real 0m16.369s
+
+In P3_ring_after, the processes wait one after another as the word travels around the ring, so the total time is close to the sum of the waits.
+
+In P3_ring_before, all processes wait before the ring starts, so their waits overlap and the total time is close to one wait.
+
+
+
+STAGE 3:
+
+javierub@DESKTOP-CHBPSS9$ echo hello | mpirun  -np 1 ./P3_ring
+type a word and press enter: process 0 sends the word hello
+the word hello came back to process 0, the ring is closed
+
+The program works correctly without any ring, the unique process receive it's word and complete the execution.
+
+
+
+javierub@DESKTOP-CHBPSS9$ echo hello | mpirun  -np 13 ./P3_ring
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 13
+slots that were requested by the application:
+
+  ./P3_ring
+
+Either request fewer slots for your application, or make more slots
+available for use.
+
+A "slot" is the Open MPI term for an allocatable unit where we can
+launch a process.  The number of slots available are defined by the
+environment in which Open MPI processes are run:
+
+  1. Hostfile, via "slots=N" clauses (N defaults to number of
+     processor cores if not provided)
+  2. The --host command line parameter, via a ":N" suffix on the
+     hostname (N defaults to 1 if not provided)
+  3. Resource manager (e.g., SLURM, PBS/Torque, LSF, etc.)
+  4. If none of a hostfile, the --host command line parameter, or an
+     RM is present, Open MPI defaults to the number of processor cores
+
+In all the above cases, if you want Open MPI to default to the number
+of hardware threads instead of the number of processor cores, use the
+--use-hwthread-cpus option.
+
+Alternatively, you can use the --oversubscribe option to ignore the
+number of available slots when deciding the number of processes to
+launch.
+--------------------------------------------------------------------------
+
+The program don't run correctly because the OS share the programs, trying to put one program in one slot of CPU, and I tried to put more programs than slots of CPU.
+
+
+
+javierub@DESKTOP-CHBPSS9$ echo hello | mpirun --oversubscribe -np 13 ./P3_ring
+type a word and press enter: process 0 sends the word hello
+process 1 has the word hello
+process 2 has the word hello
+process 3 has the word hello
+process 4 has the word hello
+process 5 has the word hello
+process 6 has the word hello
+process 7 has the word hello
+process 8 has the word hello
+process 9 has the word hello
+process 10 has the word hello
+process 11 has the word hello
+process 12 has the word hello
+the word hello came back to process 0, the ring is closed
+
+Now the program runs correctly because the OS share the programs, being able to put more than one program in one slot of CPU.
