@@ -1,0 +1,170 @@
+[
+ {
+  "file": "Tema 1.pdf",
+  "page": 4,
+  "path": "figures/Tema_1_p4_1.png",
+  "kind": "figure",
+  "box": [
+   42,
+   419,
+   554,
+   801
+  ],
+  "w": 1056,
+  "h": 795
+ },
+ {
+  "file": "Tema 1.pdf",
+  "page": 5,
+  "path": "figures/Tema_1_p5_1.png",
+  "kind": "figure",
+  "box": [
+   42,
+   212,
+   448,
+   517
+  ],
+  "w": 843,
+  "h": 640
+ },
+ {
+  "file": "Tema 1.pdf",
+  "page": 6,
+  "path": "figures/Tema_1_p6_1.png",
+  "kind": "figure",
+  "box": [
+   42,
+   358,
+   291,
+   801
+  ],
+  "w": 530,
+  "h": 917
+ },
+ {
+  "file": "Tema 1.pdf",
+  "page": 7,
+  "path": "figures/Tema_1_p7_1.png",
+  "kind": "figure",
+  "box": [
+   269,
+   136,
+   350,
+   182
+  ],
+  "w": 192,
+  "h": 124
+ },
+ {
+  "file": "Tema 1.pdf",
+  "page": 7,
+  "path": "figures/Tema_1_p7_2.png",
+  "kind": "figure",
+  "box": [
+   273,
+   304,
+   323,
+   349
+  ],
+  "w": 132,
+  "h": 122
+ },
+ {
+  "file": "Tema 1.pdf",
+  "page": 8,
+  "path": "figures/Tema_1_p8_1.png",
+  "kind": "figure",
+  "box": [
+   236,
+   752,
+   286,
+   798
+  ],
+  "w": 132,
+  "h": 122
+ },
+ {
+  "file": "Tema 1.pdf",
+  "page": 9,
+  "path": "figures/Tema_1_p9_1.png",
+  "kind": "figure",
+  "box": [
+   42,
+   510,
+   554,
+   727
+  ],
+  "w": 1056,
+  "h": 465
+ },
+ {
+  "file": "Tema 1.pdf",
+  "page": 11,
+  "path": "figures/Tema_1_p11_1.png",
+  "kind": "figure",
+  "box": [
+   42,
+   239,
+   554,
+   624
+  ],
+  "w": 1056,
+  "h": 801
+ },
+ {
+  "file": "Tema 1.pdf",
+  "page": 12,
+  "path": "figures/Tema_1_p12_1.png",
+  "kind": "figure",
+  "box": [
+   42,
+   169,
+   554,
+   553
+  ],
+  "w": 1056,
+  "h": 800
+ },
+ {
+  "file": "Tema 1.pdf",
+  "page": 15,
+  "path": "figures/Tema_1_p15_1.png",
+  "kind": "figure",
+  "box": [
+   42,
+   73,
+   554,
+   457
+  ],
+  "w": 1056,
+  "h": 800
+ },
+ {
+  "file": "Tema 1.pdf",
+  "page": 16,
+  "path": "figures/Tema_1_p16_1.png",
+  "kind": "figure",
+  "box": [
+   42,
+   524,
+   554,
+   801
+  ],
+  "w": 1056,
+  "h": 585
+ },
+ {
+  "file": "Tema 1.pdf",
+  "page": 19,
+  "path": "figures/Tema_1_p19_1.png",
+  "kind": "figure",
+  "box": [
+   42,
+   750,
+   554,
+   801
+  ],
+  "w": 1056,
+  "h": 133
+ }
+]

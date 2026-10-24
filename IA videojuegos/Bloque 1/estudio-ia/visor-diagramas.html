@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>IA videojuegos · diagramas de IDA*</title>
+<style>
+body{font:16px/1.5 system-ui,Arial,sans-serif;color:#172033;background:#f1f5f9;margin:0}
+header{background:#102a43;color:white;padding:20px 28px}h1{font-size:24px;margin:0 0 5px}header p{margin:0}
+main{max-width:1450px;margin:auto;padding:20px}nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+button{border:1px solid #94a3b8;border-radius:8px;padding:9px 13px;background:white;color:#172033;cursor:pointer;font-size:15px}
+button[aria-pressed="true"]{background:#1d4ed8;color:white;border-color:#1d4ed8}
+.panel{display:none}.panel.active{display:block}.frame{background:white;border:1px solid #cbd5e1;border-radius:9px;overflow:auto;max-height:80vh}
+.frame img{display:block;max-width:none;height:auto}p.note{margin:12px 0 4px}a{color:#155e75}
+</style></head><body>
+<header><h1>IA para videojuegos · red e IDA*</h1><p>Selecciona la red, la heurística, un umbral o el camino final. En los SVG puedes acercar la vista con el zoom del navegador.</p></header>
+<main><nav id="tabs" aria-label="Diagramas"></nav><section id="panels"></section>
+<p class="note">La etiqueta de cada calle es <strong>longitud / velocidad = segundos</strong>. En los árboles: azul = expansión, rojo = poda y verde = objetivo. Pasa el cursor sobre una calle o nodo del árbol para ver su detalle.</p>
+<p><a href="03-ejercicio-ida.md">Explicación del ejercicio</a> · <a href="traza-completa.md">Traza numérica completa</a> · <a href="tabla-calles.md">Tabla de calles</a> · <a href="01-resumen-tema-1.md">Resumen del temario</a></p>
+</main>
+<script>
+const items=[
+  ['Red','01-red.svg'],['Heurística','02-heuristica.svg'],
+  ...[1950,2250,2450,2550,2700,2850,2900].map(v=>[`Umbral ${v}`,`ida-umbral-${v}.svg`]),
+  ['Camino final','10-camino-final.svg']
+];
+const tabs=document.getElementById('tabs'),panels=document.getElementById('panels');
+items.forEach(([name,file],i)=>{
+  const b=document.createElement('button');b.textContent=name;b.type='button';b.setAttribute('aria-pressed',String(i===0));b.setAttribute('aria-controls',`p${i}`);
+  b.onclick=()=>activate(i);tabs.appendChild(b);
+  const s=document.createElement('section');s.id=`p${i}`;s.className=`panel ${i===0?'active':''}`;
+  const title=document.createElement('h2');title.textContent=name;s.appendChild(title);
+  const frame=document.createElement('div');frame.className='frame';const img=document.createElement('img');img.src=file;img.alt=`Diagrama: ${name}`;frame.appendChild(img);s.appendChild(frame);panels.appendChild(s)
+});
+function activate(index){[...tabs.children].forEach((b,i)=>b.setAttribute('aria-pressed',String(i===index)));[...panels.children].forEach((p,i)=>p.classList.toggle('active',i===index))}
+</script></body></html>

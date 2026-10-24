@@ -1,0 +1,42 @@
+{
+ "version": 5,
+ "course": "Bloque 1",
+ "language": "en",
+ "exam_date": null,
+ "profile": "large",
+ "materials": "C:\\Users\\javie\\Desktop\\4-Carrera\\IA videojuegos\\Bloque 1",
+ "created": "2026-10-23 11:28",
+ "updated": "2026-10-23 11:31",
+ "slice_chars": 12000,
+ "current": 1,
+ "chapters": [
+  {
+   "n": 1,
+   "title": "Tema 1",
+   "status": "todo",
+   "part": 1,
+   "parts": 1,
+   "sources": [
+    "Tema 1.pdf"
+   ],
+   "questions": 0
+  }
+ ],
+ "history": [],
+ "mistakes": [],
+ "notes": [],
+ "last_figures": [
+  "C:\\Users\\javie\\Desktop\\4-Carrera\\IA videojuegos\\Bloque 1\\exam-cram\\figures\\Tema_1_p5_1.png",
+  "C:\\Users\\javie\\Desktop\\4-Carrera\\IA videojuegos\\Bloque 1\\exam-cram\\figures\\Tema_1_p7_1.png",
+  "C:\\Users\\javie\\Desktop\\4-Carrera\\IA videojuegos\\Bloque 1\\exam-cram\\figures\\Tema_1_p7_2.png",
+  "C:\\Users\\javie\\Desktop\\4-Carrera\\IA videojuegos\\Bloque 1\\exam-cram\\figures\\Tema_1_p8_1.png",
+  "C:\\Users\\javie\\Desktop\\4-Carrera\\IA videojuegos\\Bloque 1\\exam-cram\\figures\\Tema_1_p9_1.png",
+  "C:\\Users\\javie\\Desktop\\4-Carrera\\IA videojuegos\\Bloque 1\\exam-cram\\figures\\Tema_1_p11_1.png",
+  "C:\\Users\\javie\\Desktop\\4-Carrera\\IA videojuegos\\Bloque 1\\exam-cram\\figures\\Tema_1_p12_1.png",
+  "C:\\Users\\javie\\Desktop\\4-Carrera\\IA videojuegos\\Bloque 1\\exam-cram\\figures\\Tema_1_p15_1.png",
+  "C:\\Users\\javie\\Desktop\\4-Carrera\\IA videojuegos\\Bloque 1\\exam-cram\\figures\\Tema_1_p16_1.png",
+  "C:\\Users\\javie\\Desktop\\4-Carrera\\IA videojuegos\\Bloque 1\\exam-cram\\figures\\Tema_1_p19_1.png",
+  "C:\\Users\\javie\\Desktop\\4-Carrera\\IA videojuegos\\Bloque 1\\claseFaltante1.jpeg",
+  "C:\\Users\\javie\\Desktop\\4-Carrera\\IA videojuegos\\Bloque 1\\ejercicioIDA1.jpeg"
+ ]
+}

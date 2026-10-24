@@ -1,0 +1,110 @@
+[
+ {
+  "n": 1,
+  "title": "Tema 1",
+  "sources": [
+   "Tema 1.pdf"
+  ],
+  "figures": [
+   "claseFaltante1.jpeg",
+   "ejercicioIDA1.jpeg"
+  ],
+  "blocks": [
+   {
+    "file": "Tema 1.pdf",
+    "page": 1,
+    "text": "Tema 1\n8 notes · Exported 2026-10-23"
+   },
+   {
+    "file": "Tema 1.pdf",
+    "page": 2,
+    "text": "Contents\n1. 0 Presentación 3\n1. 1 Entornos de un Solo Agente 5\n1.2 Espacios de Estados 7\n1.3 Búsquedas con árbol 10\n1.3 Búsquedas con Árbol (Continuación) 12\n1.3.2 Búsquedas con Árbol 15\n1.4 Búsquedas con marcha atrás 18\n1.5 Heurísticos Bases de Datos de Patrones 19"
+   },
+   {
+    "file": "Tema 1.pdf",
+    "page": 3,
+    "text": "1. 0 Presentación\n2026-09-10\nMandow Lorenzo: Despacho 3.2.38 --- lmandow@uma.es\nIntroducción:\nLa IA se divide en:\nIA simbólica\nSe basa en la Hipótesis del Sistema de Símbolos Físicos (Newell y Simon, 1976)\nHipótesis de la Búsqueda Heurística\nLos problemas se resuelven buscando de forma selectiva (heurística) en un espacio de problema\n(representación del problema).\nAprendizaje (predicción, inducción)\nResolución de problemas (deducción) ⋆\nUn SSF posee los medios necesarios y suficientes para acciones inteligentes generales.\nUn SSF posee:\nUn conjunto de expresiones simbólicas\nUnos procesos que las manipulan\nLos seres humanos y los ordenadores pueden usar el SSF"
+   },
+   {
+    "file": "Tema 1.pdf",
+    "page": 4,
+    "text": ""
+   },
+   {
+    "file": "Tema 1.pdf",
+    "page": 5,
+    "text": "1. 1 Entornos de un Solo Agente\n2026-09-10\n1. Representación: Espacios de Estados\nRepresentación formal de una parte relevante del mundo.\nUn EE se compone de:\nEjemplo: Problema de los Misioneros y los caníbales\nConjunto de estados (E) (Posibles situaciones del mundo)\nConjunto de acciones (cómo pasar de un estado a otro)\nPrecondición: E -> {true, false}\nEfectos: E -> E"
+   },
+   {
+    "file": "Tema 1.pdf",
+    "page": 6,
+    "text": ""
+   },
+   {
+    "file": "Tema 1.pdf",
+    "page": 7,
+    "text": "1.2 Espacios de Estados\n2026-09-15\nBúsquedas con Árbol\nUn espacio de estados se compone de:\nPuzle 8\nEl puzle 8 está formado por una cuadrícula de con ocho piezas numeradas y un hueco. Un movimiento\nconsiste en deslizar hacia el hueco una pieza adyacente.\nEl estado inicial considerado es:\nEl valor representa el hueco.\nRepresentación de un estado\nCada estado se representa mediante una matriz de enteros de tamaño :\nLa posición del hueco se denota por , donde es la fila y es la columna. Para el estado inicial:\nAmplitud\nDijkstra\nA*\nConjunto de Estados (Posibles situaciones)\nConjunto de acciones (Pasar de un estado a otro)\nPrecondición\nEfectos\n3 × 3\n3 4 2\n0 1 5\n7 6 8\n0\n3 × 3\n𝐸 =\n𝑒0,0 𝑒0,1 𝑒0,2\n𝑒1,0 𝑒1,1 𝑒1,2\n𝑒2,0 𝑒2,1 𝑒2,2\n(𝐹𝑖, 𝐶𝑗) 𝐹𝑖 𝐶𝑗"
+   },
+   {
+    "file": "Tema 1.pdf",
+    "page": 8,
+    "text": "Acciones\nLas acciones consisten en mover el hueco en una de las cuatro direcciones posibles. En cada caso se\nintercambia el hueco con la pieza adyacente mediante una operación swap .\n| Acción | Precondición | Efecto | Coste |\n| Mover el hueco hacia arriba | | | |\n| Mover el hueco hacia abajo | | | |\n| Mover el hueco hacia la derecha | | | |\n| Mover el hueco hacia la izquierda | | | |\nPor tanto, una acción solo se puede aplicar si se cumple su precondición. Después de aplicar la acción, el\nhueco intercambia su posición con la pieza contigua correspondiente.\nOrden del token -> d(t_1, <t_1, t_2, ..., t_k)\nd(2, <1,5,2>) = 1 -> Porque si ordeno <1,5,2> me queda <1,2,5> y el número 2 está en la posición 1.\nd(5, <1,5,2>) = 2\nRankp me dice el orden de una tupla en una lista ordenada.\nRankp de <2,0,1> es 4 porque: {<0,1,2>, <0,2,1>, <1, 0,2>, <1,2,0>, <2,0,1>, ...} si ordeno las posibles\ncombinaciones se me queda en la 4 posición.\nLa fórmula es:\nrankp(<2,0,1>) = d(2, <2,0,1>) 2! + rankp(<0,1>) = d(2, <2,0,1>) 2! + d(0, <0,1>) * 1! + 0 = 4\nUnrankp([0,1,2], 5) -> NO CAE\n𝐸0 =\n3 4 2\n0 1 5\n7 6 8\n, (𝐹𝑖, 𝐶𝑗) = (1, 0).\n𝐹𝑖 > 0 swap((𝐹𝑖\n, 𝐶𝑗),(𝐹𝑖 - 1, 𝐶𝑗)) 1\n𝐹𝑖 < 2 swap((𝐹𝑖\n, 𝐶𝑗),(𝐹𝑖 + 1, 𝐶𝑗)) 1\n𝐶𝑗 < 2 swap((𝐹𝑖\n, 𝐶𝑗),(𝐹𝑖\n, 𝐶𝑗 + 1)) 1\n𝐶𝑗 > 0 swap((𝐹𝑖\n, 𝐶𝑗),(𝐹𝑖\n, 𝐶𝑗 - 1)) 1\n𝑟𝑎𝑛𝑘𝑝(< 𝑡1\n,𝑡2\n,…,𝑡𝑘) = 𝑑(𝑡1\n, < 𝑡1\n,𝑡2\n,…,𝑡𝑘 >) ∗ (𝑘 - 1)! + 𝑟𝑎𝑛𝑘𝑝(< 𝑡2\n,…,𝑡𝑘 >)\n𝑟𝑎𝑛𝑘𝑝(< 𝑡1 >) = 0"
+   },
+   {
+    "file": "Tema 1.pdf",
+    "page": 9,
+    "text": "Un Espacio de Estados define implícitamente un grafo:\nEstrategias de búsqueda\nEstrategias irrevocables\nEstas estrategias exploran un único camino:\nEstrategias tentativas\nEstas estrategias exploran sistemáticamente el grafo:\nEstados == Nodos\nAcciones == Arcos\nBúsqueda local\nAlgoritmo genéticos\nCon árbol: Guardan todos los caminos interesantes.\nCon retroceso: Solo guardan el camino actual."
+   },
+   {
+    "file": "Tema 1.pdf",
+    "page": 10,
+    "text": "1.3 Búsquedas con árbol\n2026-09-22\nLo que caracteriza a cada método de búsqueda es:\nMétodo de búsqueda de Amplitud:\nPropiedades de los algoritmos\nLas propiedades de los distintos algoritmos/métodos de búsquedas con árbol son:\nDijkstra\nAlgoritmo de búsqueda a ciegas.\n1. Criterio de selección de ABIERTOS.\n2. Qué hacer cuando se encuentran 2 caminos al mismo nodo.\n3. Criterio de terminación.\n1. Abiertos nuevos -> Al final de la cola\n2. Nos quedamos con el antiguo\n3. Cuando se genera el estado objetivo / Cuando se selecciona para expansión el estado objetivo.\n1. Completo: Si hay solución, la encuentra (en un número finito de pasos).\nEj: Amplitud es completo porque aunque el árbol sea infinito encuentra la solución porque esa solución\ntiene que estar a una profundidad finita.\n2. Admisible: Si hay solución, encuentra la óptima.\nEj: Amplitud no lo es, en general, porque ni siquiera tiene en cuenta el coste. Si todos los arcos tienen\nel mismo coste (el coste es la profundidad), ahí si que encuentra la solución óptima.\n3. Consumo de memoria (nº de nodos almacenados en el árbol) y tiempo (nº de iteraciones (selecciones de\nabiertos)).\nUn árbol infinito con factor de ramificación b (branch) con solución a profundidad d(depth) tiene un\ncoste de memoria de 𝑂(𝑏\n𝑑)\n4. Malla cuadrada de 4 vecinos.\n1. Selección de ABIERTOS: Menor valor de g(n).\n2. 2 caminos al mismo nodo: Conservamos el de menor g(n).\n3. Criterio de terminación: Cuando se selecciona el objetivo (con el algoritmo de amplitud también se podía\nacabar cuando se seleccionaba para expansión el nodo objetivo, ahora no porque puedes encontrar un"
+   },
+   {
+    "file": "Tema 1.pdf",
+    "page": 11,
+    "text": "Suposiciones:\nNotación:\nA*\nAlgoritmo de búsqueda Heurístico: Conocimiento propio del problema para guiar la respuesta.\natajo).\n1. Cada arco del grafo (n, n') tiene un coste c(n,n') >= 0\n2. El coste de un camino es la suma de los costes de los arcos.\n3. Caminos infinitos tienen infinitos. ∀(𝑛, 𝑛\n′)𝑐(𝑛, 𝑛\n′) ≥ 𝜀 > 0\ng(n) = Coste de camino guardado en el árbol desde S (raíz) hasta n."
+   },
+   {
+    "file": "Tema 1.pdf",
+    "page": 12,
+    "text": "1.3 Búsquedas con Árbol (Continuación)\n2026-09-25\nEl algoritmo A* se basa en:\nPropiedades de A*\n1. Selección de abiertos:\nmenor 𝑓(𝑛) = 𝑔(𝑛) + ℎ(𝑛)\n2. 2 caminos al mismo nodo:\nSi el nuevo camino a n' es mejor, redirigir el puntero de n' a ese camino.\nSi n' estaba cerrado, lo devolvemos a abierto.\nEsto hace que podamos expandir el mismo nodo varias veces en A*.\n3. Terminación:\nCuando seleccionamos el objetivo.\n𝑓(𝑛) = 𝑔(𝑛) + ℎ(𝑛)"
+   },
+   {
+    "file": "Tema 1.pdf",
+    "page": 13,
+    "text": "Coste de la solución óptima\nCoste óptimo real desde S hasta n. (S es el nodo raíz)\nNormalmente\nCoste óptimo real desde n al objetivo.\nSuposiciones\nPropiedad 1\nSi es optimista, es admisible.\nLEMA 1: termina siempre en grafos finitos.\nLEMA 2: Sea el camino solución óptimo: nunca se poda.\nLEMA 3: termina siempre incluso en grafos infinitos.\nLEMA 4: no puede terminar con una solución subóptima.\nPropiedad 2\nSi h2 está más informado que h1, entonces si A* con h2 expande n, también lo hará con h1.\nUn heurístico es Monótono si cuando hago un movimiento (rellenar)\nComprobar si el heurístico h2 es monótono (distancia euclidea (creo, revisar si es es o es la manhatan)a la\nposición final)\n𝑔(𝑛) = Coste en el árbol hasta n\nℎ(𝑛) = Estimación del coste n al objetivo\n𝑓(𝑛) = Estimación de coste de una solución que pasa por n\n𝑐\n∗ =\n𝑔\n∗(𝑛) =\n𝑔(𝑛) ≥ 𝑔\n∗(𝑛)\nℎ\n∗(𝑛) =\n𝑓\n∗(𝑛) = 𝑔\n∗(𝑛) + ℎ\n∗(𝑛)\n1. ∀𝑛, ℎ(𝑛) ≤ ℎ -> Optimista o admisible ∗(𝑛)\n2. Caminos infinitos tienen costes infinitos.\n3. El nº de sucesores de un nodo es finito.\nℎ(𝑛) 𝐴∗\n𝐴∗\n𝑃\n∗ = 𝑛0, 𝑛1,…, 𝑛𝑘 𝑃\n∗\n𝐴∗\n𝐴∗"
+   },
+   {
+    "file": "Tema 1.pdf",
+    "page": 14,
+    "text": "Propiedad 3:\nSi h(n) es monótono, cuando A selecciona un nodo para expanción, g(n) = g(n) (Expandirá cada nodo a lo sumo\n1 vez). -> Es mejor hacerlo con A que con Dijstra porque A aunque suela ser mejor, si expande los nodos varias\nveces puede tardar más.\nEJERCICIO\nRed de carreteras densa con p nodos por unidad de superficie.\nDeseamos encontrar un camino óptimo entre A(0,0) y Z(0, a).\nSe utiliza distancia euclídea como heurístico.\nLa distancia óptima entre A y Z es C*=C.\nCalcular la cota superior nº nodos por Dijkstra y por A*"
+   },
+   {
+    "file": "Tema 1.pdf",
+    "page": 15,
+    "text": "1.3.2 Búsquedas con Árbol\n2026-09-28\nPropiedades de A*\nPropiedad 1\nSi es optimista, es admisible.\nLEMA 1: termina siempre en grafos finitos.\nLEMA 2: Sea el camino solución óptimo: nunca se poda.\nLEMA 3: termina siempre incluso en grafos infinitos.\nLEMA 4: no puede terminar con una solución subóptima.\nPropiedad 2\nSi h2 está más informado que h1, entonces si A* con h2 expande n, también lo hará con h1.\nℎ(𝑛) 𝐴∗\n𝐴∗\n𝑃\n∗ = 𝑛0, 𝑛1,…, 𝑛𝑘 𝑃\n∗\n𝐴∗\n𝐴∗"
+   },
+   {
+    "file": "Tema 1.pdf",
+    "page": 16,
+    "text": "El profe hizo una demostración en la pizarra que concluía en que para unos datos dados, siempre A visita <=\ncantidad de nodos que Dijkstra (siendo la elipse roja la zona de búsqueda de A y la zona azul la zona de\nbúsqueda de Dijkstra).\nA* suele ser mejor pero como a veces re-visita un nodo varias veces, en algunos casos puede ser peor.\nUn heurístico es monótono, también llamado consistente, si para cada movimiento n → n' se cumple:\ndonde c(n,n') es el coste del movimiento.\nSi cada movimiento cuesta 1:\nEquivalentemente:\nEs decir, el valor de f no disminuye al avanzar por un camino.\nSi h es monótono y A* trabaja sobre un grafo, cuando selecciona un estado para expandir se cumple:\nPor tanto, cada estado se expande como máximo una vez y no es necesario reabrirlo posteriormente.\nℎ(𝑛) ≤ 𝑐(𝑛, 𝑛\n′\n) + ℎ(𝑛\n′\n)\nℎ(𝑛) ≤ 1 + ℎ(𝑛\n′)\n𝑓(𝑛) ≤ 𝑓(𝑛\n′\n)\n𝑔(𝑛) = 𝑔\n∗\n(𝑛)"
+   },
+   {
+    "file": "Tema 1.pdf",
+    "page": 17,
+    "text": "Distancia Manhattan\nSi el movimiento es horizontal o vertical y cuesta 1, la distancia Manhattan es:\nEs monótona porque un movimiento cambia la distancia Manhattan como máximo en 1:\nPropiedad 3:\nSi h(n) es monótono, cuando A selecciona un nodo para expansión, g(n) = g(n) (Expandirá cada nodo a lo sumo\n1 vez). -> Es mejor hacerlo con A que con Dijsktra porque A aunque suela ser mejor, si expande los nodos\nvarias veces puede tardar más.\nℎ𝑀(𝑛) = |𝑥 - 𝑥\n∗\n| + |𝑦 - 𝑦\n∗\n|\nℎ𝑀(𝑛) ≤ 1 + ℎ𝑀(𝑛\n′\n)"
+   },
+   {
+    "file": "Tema 1.pdf",
+    "page": 18,
+    "text": "1.4 Búsquedas con marcha atrás\n2026-09-29\nPropiedades de Backtracking:\nCompleto:\nEn general no. Sí en grafos acíclicos dirigidos o árboles finitos.\nAdmisible:\nNo.\nConsumo tiempo / memoria"
+   },
+   {
+    "file": "Tema 1.pdf",
+    "page": 19,
+    "text": "1.5 Heurísticos Bases de Datos de Patrones\n2026-10-08"
+   }
+  ]
+ }
+]

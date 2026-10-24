@@ -1,0 +1,4644 @@
+{
+  "aristas": [
+    {
+      "a": [
+        5,
+        2
+      ],
+      "b": [
+        5,
+        1
+      ],
+      "tipo": "gruesa",
+      "longitud_m": 500,
+      "velocidad_m_s": 2,
+      "coste_s": 250
+    },
+    {
+      "a": [
+        5,
+        3
+      ],
+      "b": [
+        5,
+        2
+      ],
+      "tipo": "horizontal",
+      "longitud_m": 400,
+      "velocidad_m_s": 2,
+      "coste_s": 200
+    },
+    {
+      "a": [
+        5,
+        4
+      ],
+      "b": [
+        5,
+        3
+      ],
+      "tipo": "punteada",
+      "longitud_m": 400,
+      "velocidad_m_s": 1,
+      "coste_s": 400
+    },
+    {
+      "a": [
+        5,
+        5
+      ],
+      "b": [
+        5,
+        4
+      ],
+      "tipo": "horizontal",
+      "longitud_m": 500,
+      "velocidad_m_s": 2,
+      "coste_s": 250
+    },
+    {
+      "a": [
+        4,
+        2
+      ],
+      "b": [
+        4,
+        3
+      ],
+      "tipo": "horizontal",
+      "longitud_m": 400,
+      "velocidad_m_s": 2,
+      "coste_s": 200
+    },
+    {
+      "a": [
+        4,
+        3
+      ],
+      "b": [
+        4,
+        4
+      ],
+      "tipo": "punteada",
+      "longitud_m": 400,
+      "velocidad_m_s": 1,
+      "coste_s": 400
+    },
+    {
+      "a": [
+        4,
+        4
+      ],
+      "b": [
+        4,
+        5
+      ],
+      "tipo": "horizontal",
+      "longitud_m": 500,
+      "velocidad_m_s": 2,
+      "coste_s": 250
+    },
+    {
+      "a": [
+        3,
+        2
+      ],
+      "b": [
+        3,
+        1
+      ],
+      "tipo": "horizontal",
+      "longitud_m": 500,
+      "velocidad_m_s": 2,
+      "coste_s": 250
+    },
+    {
+      "a": [
+        3,
+        3
+      ],
+      "b": [
+        3,
+        2
+      ],
+      "tipo": "horizontal",
+      "longitud_m": 400,
+      "velocidad_m_s": 2,
+      "coste_s": 200
+    },
+    {
+      "a": [
+        3,
+        5
+      ],
+      "b": [
+        3,
+        3
+      ],
+      "tipo": "gruesa",
+      "longitud_m": 900,
+      "velocidad_m_s": 2,
+      "coste_s": 450
+    },
+    {
+      "a": [
+        2,
+        1
+      ],
+      "b": [
+        2,
+        2
+      ],
+      "tipo": "horizontal",
+      "longitud_m": 500,
+      "velocidad_m_s": 2,
+      "coste_s": 250
+    },
+    {
+      "a": [
+        2,
+        2
+      ],
+      "b": [
+        2,
+        3
+      ],
+      "tipo": "punteada",
+      "longitud_m": 400,
+      "velocidad_m_s": 1,
+      "coste_s": 400
+    },
+    {
+      "a": [
+        2,
+        3
+      ],
+      "b": [
+        2,
+        5
+      ],
+      "tipo": "gruesa",
+      "longitud_m": 900,
+      "velocidad_m_s": 2,
+      "coste_s": 450
+    },
+    {
+      "a": [
+        1,
+        2
+      ],
+      "b": [
+        1,
+        1
+      ],
+      "tipo": "horizontal",
+      "longitud_m": 500,
+      "velocidad_m_s": 2,
+      "coste_s": 250
+    },
+    {
+      "a": [
+        1,
+        3
+      ],
+      "b": [
+        1,
+        2
+      ],
+      "tipo": "punteada",
+      "longitud_m": 400,
+      "velocidad_m_s": 1,
+      "coste_s": 400
+    },
+    {
+      "a": [
+        1,
+        5
+      ],
+      "b": [
+        1,
+        3
+      ],
+      "tipo": "horizontal",
+      "longitud_m": 900,
+      "velocidad_m_s": 2,
+      "coste_s": 450
+    },
+    {
+      "a": [
+        1,
+        1
+      ],
+      "b": [
+        2,
+        1
+      ],
+      "tipo": "vertical",
+      "longitud_m": 600,
+      "velocidad_m_s": 1,
+      "coste_s": 600
+    },
+    {
+      "a": [
+        2,
+        1
+      ],
+      "b": [
+        3,
+        1
+      ],
+      "tipo": "vertical",
+      "longitud_m": 600,
+      "velocidad_m_s": 1,
+      "coste_s": 600
+    },
+    {
+      "a": [
+        3,
+        1
+      ],
+      "b": [
+        5,
+        1
+      ],
+      "tipo": "gruesa",
+      "longitud_m": 900,
+      "velocidad_m_s": 2,
+      "coste_s": 450
+    },
+    {
+      "a": [
+        5,
+        2
+      ],
+      "b": [
+        4,
+        2
+      ],
+      "tipo": "gruesa",
+      "longitud_m": 400,
+      "velocidad_m_s": 2,
+      "coste_s": 200
+    },
+    {
+      "a": [
+        4,
+        2
+      ],
+      "b": [
+        3,
+        2
+      ],
+      "tipo": "gruesa",
+      "longitud_m": 500,
+      "velocidad_m_s": 2,
+      "coste_s": 250
+    },
+    {
+      "a": [
+        3,
+        2
+      ],
+      "b": [
+        2,
+        2
+      ],
+      "tipo": "vertical",
+      "longitud_m": 600,
+      "velocidad_m_s": 1,
+      "coste_s": 600
+    },
+    {
+      "a": [
+        2,
+        2
+      ],
+      "b": [
+        1,
+        2
+      ],
+      "tipo": "punteada",
+      "longitud_m": 600,
+      "velocidad_m_s": 1,
+      "coste_s": 600
+    },
+    {
+      "a": [
+        1,
+        3
+      ],
+      "b": [
+        2,
+        3
+      ],
+      "tipo": "punteada",
+      "longitud_m": 600,
+      "velocidad_m_s": 1,
+      "coste_s": 600
+    },
+    {
+      "a": [
+        2,
+        3
+      ],
+      "b": [
+        3,
+        3
+      ],
+      "tipo": "gruesa",
+      "longitud_m": 600,
+      "velocidad_m_s": 2,
+      "coste_s": 300
+    },
+    {
+      "a": [
+        3,
+        3
+      ],
+      "b": [
+        4,
+        3
+      ],
+      "tipo": "vertical",
+      "longitud_m": 500,
+      "velocidad_m_s": 1,
+      "coste_s": 500
+    },
+    {
+      "a": [
+        4,
+        3
+      ],
+      "b": [
+        5,
+        3
+      ],
+      "tipo": "punteada",
+      "longitud_m": 400,
+      "velocidad_m_s": 1,
+      "coste_s": 400
+    },
+    {
+      "a": [
+        5,
+        4
+      ],
+      "b": [
+        4,
+        4
+      ],
+      "tipo": "punteada",
+      "longitud_m": 400,
+      "velocidad_m_s": 1,
+      "coste_s": 400
+    },
+    {
+      "a": [
+        1,
+        5
+      ],
+      "b": [
+        2,
+        5
+      ],
+      "tipo": "vertical",
+      "longitud_m": 600,
+      "velocidad_m_s": 1,
+      "coste_s": 600
+    },
+    {
+      "a": [
+        2,
+        5
+      ],
+      "b": [
+        3,
+        5
+      ],
+      "tipo": "gruesa",
+      "longitud_m": 600,
+      "velocidad_m_s": 2,
+      "coste_s": 300
+    },
+    {
+      "a": [
+        3,
+        5
+      ],
+      "b": [
+        4,
+        5
+      ],
+      "tipo": "vertical",
+      "longitud_m": 500,
+      "velocidad_m_s": 1,
+      "coste_s": 500
+    },
+    {
+      "a": [
+        4,
+        5
+      ],
+      "b": [
+        5,
+        5
+      ],
+      "tipo": "vertical",
+      "longitud_m": 400,
+      "velocidad_m_s": 1,
+      "coste_s": 400
+    }
+  ],
+  "traza": [
+    {
+      "iteracion": 1,
+      "umbral": 1950,
+      "siguiente": 2250,
+      "solucion": null,
+      "registros": [
+        {
+          "id": 0,
+          "parent": null,
+          "nodo": [
+            1,
+            1
+          ],
+          "g": 0,
+          "h": 1950,
+          "f": 1950,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ]
+          ],
+          "via": null
+        },
+        {
+          "id": 1,
+          "parent": 0,
+          "nodo": [
+            2,
+            1
+          ],
+          "g": 600,
+          "h": 1650,
+          "f": 2250,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "via": {
+            "a": [
+              1,
+              1
+            ],
+            "b": [
+              2,
+              1
+            ],
+            "tipo": "vertical",
+            "longitud_m": 600,
+            "velocidad_m_s": 1,
+            "coste_s": 600
+          }
+        }
+      ]
+    },
+    {
+      "iteracion": 2,
+      "umbral": 2250,
+      "siguiente": 2450,
+      "solucion": null,
+      "registros": [
+        {
+          "id": 0,
+          "parent": null,
+          "nodo": [
+            1,
+            1
+          ],
+          "g": 0,
+          "h": 1950,
+          "f": 1950,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ]
+          ],
+          "via": null
+        },
+        {
+          "id": 1,
+          "parent": 0,
+          "nodo": [
+            2,
+            1
+          ],
+          "g": 600,
+          "h": 1650,
+          "f": 2250,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "via": {
+            "a": [
+              1,
+              1
+            ],
+            "b": [
+              2,
+              1
+            ],
+            "tipo": "vertical",
+            "longitud_m": 600,
+            "velocidad_m_s": 1,
+            "coste_s": 600
+          }
+        },
+        {
+          "id": 2,
+          "parent": 1,
+          "nodo": [
+            3,
+            1
+          ],
+          "g": 1200,
+          "h": 1350,
+          "f": 2550,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              1
+            ],
+            "b": [
+              3,
+              1
+            ],
+            "tipo": "vertical",
+            "longitud_m": 600,
+            "velocidad_m_s": 1,
+            "coste_s": 600
+          }
+        },
+        {
+          "id": 3,
+          "parent": 1,
+          "nodo": [
+            2,
+            2
+          ],
+          "g": 850,
+          "h": 1400,
+          "f": 2250,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              1
+            ],
+            "b": [
+              2,
+              2
+            ],
+            "tipo": "horizontal",
+            "longitud_m": 500,
+            "velocidad_m_s": 2,
+            "coste_s": 250
+          }
+        },
+        {
+          "id": 4,
+          "parent": 3,
+          "nodo": [
+            2,
+            3
+          ],
+          "g": 1250,
+          "h": 1200,
+          "f": 2450,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              2
+            ],
+            "b": [
+              2,
+              3
+            ],
+            "tipo": "punteada",
+            "longitud_m": 400,
+            "velocidad_m_s": 1,
+            "coste_s": 400
+          }
+        },
+        {
+          "id": 5,
+          "parent": 3,
+          "nodo": [
+            1,
+            2
+          ],
+          "g": 1450,
+          "h": 1700,
+          "f": 3150,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              2
+            ],
+            "b": [
+              1,
+              2
+            ],
+            "tipo": "punteada",
+            "longitud_m": 600,
+            "velocidad_m_s": 1,
+            "coste_s": 600
+          }
+        }
+      ]
+    },
+    {
+      "iteracion": 3,
+      "umbral": 2450,
+      "siguiente": 2550,
+      "solucion": null,
+      "registros": [
+        {
+          "id": 0,
+          "parent": null,
+          "nodo": [
+            1,
+            1
+          ],
+          "g": 0,
+          "h": 1950,
+          "f": 1950,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ]
+          ],
+          "via": null
+        },
+        {
+          "id": 1,
+          "parent": 0,
+          "nodo": [
+            2,
+            1
+          ],
+          "g": 600,
+          "h": 1650,
+          "f": 2250,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "via": {
+            "a": [
+              1,
+              1
+            ],
+            "b": [
+              2,
+              1
+            ],
+            "tipo": "vertical",
+            "longitud_m": 600,
+            "velocidad_m_s": 1,
+            "coste_s": 600
+          }
+        },
+        {
+          "id": 2,
+          "parent": 1,
+          "nodo": [
+            3,
+            1
+          ],
+          "g": 1200,
+          "h": 1350,
+          "f": 2550,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              1
+            ],
+            "b": [
+              3,
+              1
+            ],
+            "tipo": "vertical",
+            "longitud_m": 600,
+            "velocidad_m_s": 1,
+            "coste_s": 600
+          }
+        },
+        {
+          "id": 3,
+          "parent": 1,
+          "nodo": [
+            2,
+            2
+          ],
+          "g": 850,
+          "h": 1400,
+          "f": 2250,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              1
+            ],
+            "b": [
+              2,
+              2
+            ],
+            "tipo": "horizontal",
+            "longitud_m": 500,
+            "velocidad_m_s": 2,
+            "coste_s": 250
+          }
+        },
+        {
+          "id": 4,
+          "parent": 3,
+          "nodo": [
+            2,
+            3
+          ],
+          "g": 1250,
+          "h": 1200,
+          "f": 2450,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              2
+            ],
+            "b": [
+              2,
+              3
+            ],
+            "tipo": "punteada",
+            "longitud_m": 400,
+            "velocidad_m_s": 1,
+            "coste_s": 400
+          }
+        },
+        {
+          "id": 5,
+          "parent": 4,
+          "nodo": [
+            3,
+            3
+          ],
+          "g": 1550,
+          "h": 900,
+          "f": 2450,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              3
+            ],
+            "b": [
+              3,
+              3
+            ],
+            "tipo": "gruesa",
+            "longitud_m": 600,
+            "velocidad_m_s": 2,
+            "coste_s": 300
+          }
+        },
+        {
+          "id": 6,
+          "parent": 5,
+          "nodo": [
+            4,
+            3
+          ],
+          "g": 2050,
+          "h": 650,
+          "f": 2700,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              3
+            ]
+          ],
+          "via": {
+            "a": [
+              3,
+              3
+            ],
+            "b": [
+              4,
+              3
+            ],
+            "tipo": "vertical",
+            "longitud_m": 500,
+            "velocidad_m_s": 1,
+            "coste_s": 500
+          }
+        },
+        {
+          "id": 7,
+          "parent": 5,
+          "nodo": [
+            3,
+            2
+          ],
+          "g": 1750,
+          "h": 1100,
+          "f": 2850,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              3,
+              2
+            ]
+          ],
+          "via": {
+            "a": [
+              3,
+              3
+            ],
+            "b": [
+              3,
+              2
+            ],
+            "tipo": "horizontal",
+            "longitud_m": 400,
+            "velocidad_m_s": 2,
+            "coste_s": 200
+          }
+        },
+        {
+          "id": 8,
+          "parent": 4,
+          "nodo": [
+            2,
+            5
+          ],
+          "g": 1700,
+          "h": 750,
+          "f": 2450,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              3
+            ],
+            "b": [
+              2,
+              5
+            ],
+            "tipo": "gruesa",
+            "longitud_m": 900,
+            "velocidad_m_s": 2,
+            "coste_s": 450
+          }
+        },
+        {
+          "id": 9,
+          "parent": 8,
+          "nodo": [
+            3,
+            5
+          ],
+          "g": 2000,
+          "h": 450,
+          "f": 2450,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              5
+            ],
+            "b": [
+              3,
+              5
+            ],
+            "tipo": "gruesa",
+            "longitud_m": 600,
+            "velocidad_m_s": 2,
+            "coste_s": 300
+          }
+        },
+        {
+          "id": 10,
+          "parent": 9,
+          "nodo": [
+            4,
+            5
+          ],
+          "g": 2500,
+          "h": 200,
+          "f": 2700,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "via": {
+            "a": [
+              3,
+              5
+            ],
+            "b": [
+              4,
+              5
+            ],
+            "tipo": "vertical",
+            "longitud_m": 500,
+            "velocidad_m_s": 1,
+            "coste_s": 500
+          }
+        },
+        {
+          "id": 11,
+          "parent": 9,
+          "nodo": [
+            3,
+            3
+          ],
+          "g": 2450,
+          "h": 900,
+          "f": 3350,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          "via": {
+            "a": [
+              3,
+              5
+            ],
+            "b": [
+              3,
+              3
+            ],
+            "tipo": "gruesa",
+            "longitud_m": 900,
+            "velocidad_m_s": 2,
+            "coste_s": 450
+          }
+        },
+        {
+          "id": 12,
+          "parent": 3,
+          "nodo": [
+            1,
+            2
+          ],
+          "g": 1450,
+          "h": 1700,
+          "f": 3150,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              2
+            ],
+            "b": [
+              1,
+              2
+            ],
+            "tipo": "punteada",
+            "longitud_m": 600,
+            "velocidad_m_s": 1,
+            "coste_s": 600
+          }
+        }
+      ]
+    },
+    {
+      "iteracion": 4,
+      "umbral": 2550,
+      "siguiente": 2700,
+      "solucion": null,
+      "registros": [
+        {
+          "id": 0,
+          "parent": null,
+          "nodo": [
+            1,
+            1
+          ],
+          "g": 0,
+          "h": 1950,
+          "f": 1950,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ]
+          ],
+          "via": null
+        },
+        {
+          "id": 1,
+          "parent": 0,
+          "nodo": [
+            2,
+            1
+          ],
+          "g": 600,
+          "h": 1650,
+          "f": 2250,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "via": {
+            "a": [
+              1,
+              1
+            ],
+            "b": [
+              2,
+              1
+            ],
+            "tipo": "vertical",
+            "longitud_m": 600,
+            "velocidad_m_s": 1,
+            "coste_s": 600
+          }
+        },
+        {
+          "id": 2,
+          "parent": 1,
+          "nodo": [
+            3,
+            1
+          ],
+          "g": 1200,
+          "h": 1350,
+          "f": 2550,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              1
+            ],
+            "b": [
+              3,
+              1
+            ],
+            "tipo": "vertical",
+            "longitud_m": 600,
+            "velocidad_m_s": 1,
+            "coste_s": 600
+          }
+        },
+        {
+          "id": 3,
+          "parent": 2,
+          "nodo": [
+            5,
+            1
+          ],
+          "g": 1650,
+          "h": 900,
+          "f": 2550,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              5,
+              1
+            ]
+          ],
+          "via": {
+            "a": [
+              3,
+              1
+            ],
+            "b": [
+              5,
+              1
+            ],
+            "tipo": "gruesa",
+            "longitud_m": 900,
+            "velocidad_m_s": 2,
+            "coste_s": 450
+          }
+        },
+        {
+          "id": 4,
+          "parent": 1,
+          "nodo": [
+            2,
+            2
+          ],
+          "g": 850,
+          "h": 1400,
+          "f": 2250,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              1
+            ],
+            "b": [
+              2,
+              2
+            ],
+            "tipo": "horizontal",
+            "longitud_m": 500,
+            "velocidad_m_s": 2,
+            "coste_s": 250
+          }
+        },
+        {
+          "id": 5,
+          "parent": 4,
+          "nodo": [
+            2,
+            3
+          ],
+          "g": 1250,
+          "h": 1200,
+          "f": 2450,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              2
+            ],
+            "b": [
+              2,
+              3
+            ],
+            "tipo": "punteada",
+            "longitud_m": 400,
+            "velocidad_m_s": 1,
+            "coste_s": 400
+          }
+        },
+        {
+          "id": 6,
+          "parent": 5,
+          "nodo": [
+            3,
+            3
+          ],
+          "g": 1550,
+          "h": 900,
+          "f": 2450,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              3
+            ],
+            "b": [
+              3,
+              3
+            ],
+            "tipo": "gruesa",
+            "longitud_m": 600,
+            "velocidad_m_s": 2,
+            "coste_s": 300
+          }
+        },
+        {
+          "id": 7,
+          "parent": 6,
+          "nodo": [
+            4,
+            3
+          ],
+          "g": 2050,
+          "h": 650,
+          "f": 2700,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              3
+            ]
+          ],
+          "via": {
+            "a": [
+              3,
+              3
+            ],
+            "b": [
+              4,
+              3
+            ],
+            "tipo": "vertical",
+            "longitud_m": 500,
+            "velocidad_m_s": 1,
+            "coste_s": 500
+          }
+        },
+        {
+          "id": 8,
+          "parent": 6,
+          "nodo": [
+            3,
+            2
+          ],
+          "g": 1750,
+          "h": 1100,
+          "f": 2850,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              3,
+              2
+            ]
+          ],
+          "via": {
+            "a": [
+              3,
+              3
+            ],
+            "b": [
+              3,
+              2
+            ],
+            "tipo": "horizontal",
+            "longitud_m": 400,
+            "velocidad_m_s": 2,
+            "coste_s": 200
+          }
+        },
+        {
+          "id": 9,
+          "parent": 5,
+          "nodo": [
+            2,
+            5
+          ],
+          "g": 1700,
+          "h": 750,
+          "f": 2450,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              3
+            ],
+            "b": [
+              2,
+              5
+            ],
+            "tipo": "gruesa",
+            "longitud_m": 900,
+            "velocidad_m_s": 2,
+            "coste_s": 450
+          }
+        },
+        {
+          "id": 10,
+          "parent": 9,
+          "nodo": [
+            3,
+            5
+          ],
+          "g": 2000,
+          "h": 450,
+          "f": 2450,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              5
+            ],
+            "b": [
+              3,
+              5
+            ],
+            "tipo": "gruesa",
+            "longitud_m": 600,
+            "velocidad_m_s": 2,
+            "coste_s": 300
+          }
+        },
+        {
+          "id": 11,
+          "parent": 10,
+          "nodo": [
+            4,
+            5
+          ],
+          "g": 2500,
+          "h": 200,
+          "f": 2700,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "via": {
+            "a": [
+              3,
+              5
+            ],
+            "b": [
+              4,
+              5
+            ],
+            "tipo": "vertical",
+            "longitud_m": 500,
+            "velocidad_m_s": 1,
+            "coste_s": 500
+          }
+        },
+        {
+          "id": 12,
+          "parent": 10,
+          "nodo": [
+            3,
+            3
+          ],
+          "g": 2450,
+          "h": 900,
+          "f": 3350,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          "via": {
+            "a": [
+              3,
+              5
+            ],
+            "b": [
+              3,
+              3
+            ],
+            "tipo": "gruesa",
+            "longitud_m": 900,
+            "velocidad_m_s": 2,
+            "coste_s": 450
+          }
+        },
+        {
+          "id": 13,
+          "parent": 4,
+          "nodo": [
+            1,
+            2
+          ],
+          "g": 1450,
+          "h": 1700,
+          "f": 3150,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              2
+            ],
+            "b": [
+              1,
+              2
+            ],
+            "tipo": "punteada",
+            "longitud_m": 600,
+            "velocidad_m_s": 1,
+            "coste_s": 600
+          }
+        }
+      ]
+    },
+    {
+      "iteracion": 5,
+      "umbral": 2700,
+      "siguiente": 2850,
+      "solucion": null,
+      "registros": [
+        {
+          "id": 0,
+          "parent": null,
+          "nodo": [
+            1,
+            1
+          ],
+          "g": 0,
+          "h": 1950,
+          "f": 1950,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ]
+          ],
+          "via": null
+        },
+        {
+          "id": 1,
+          "parent": 0,
+          "nodo": [
+            2,
+            1
+          ],
+          "g": 600,
+          "h": 1650,
+          "f": 2250,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "via": {
+            "a": [
+              1,
+              1
+            ],
+            "b": [
+              2,
+              1
+            ],
+            "tipo": "vertical",
+            "longitud_m": 600,
+            "velocidad_m_s": 1,
+            "coste_s": 600
+          }
+        },
+        {
+          "id": 2,
+          "parent": 1,
+          "nodo": [
+            3,
+            1
+          ],
+          "g": 1200,
+          "h": 1350,
+          "f": 2550,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              1
+            ],
+            "b": [
+              3,
+              1
+            ],
+            "tipo": "vertical",
+            "longitud_m": 600,
+            "velocidad_m_s": 1,
+            "coste_s": 600
+          }
+        },
+        {
+          "id": 3,
+          "parent": 2,
+          "nodo": [
+            5,
+            1
+          ],
+          "g": 1650,
+          "h": 900,
+          "f": 2550,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              5,
+              1
+            ]
+          ],
+          "via": {
+            "a": [
+              3,
+              1
+            ],
+            "b": [
+              5,
+              1
+            ],
+            "tipo": "gruesa",
+            "longitud_m": 900,
+            "velocidad_m_s": 2,
+            "coste_s": 450
+          }
+        },
+        {
+          "id": 4,
+          "parent": 1,
+          "nodo": [
+            2,
+            2
+          ],
+          "g": 850,
+          "h": 1400,
+          "f": 2250,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              1
+            ],
+            "b": [
+              2,
+              2
+            ],
+            "tipo": "horizontal",
+            "longitud_m": 500,
+            "velocidad_m_s": 2,
+            "coste_s": 250
+          }
+        },
+        {
+          "id": 5,
+          "parent": 4,
+          "nodo": [
+            2,
+            3
+          ],
+          "g": 1250,
+          "h": 1200,
+          "f": 2450,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              2
+            ],
+            "b": [
+              2,
+              3
+            ],
+            "tipo": "punteada",
+            "longitud_m": 400,
+            "velocidad_m_s": 1,
+            "coste_s": 400
+          }
+        },
+        {
+          "id": 6,
+          "parent": 5,
+          "nodo": [
+            3,
+            3
+          ],
+          "g": 1550,
+          "h": 900,
+          "f": 2450,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              3
+            ],
+            "b": [
+              3,
+              3
+            ],
+            "tipo": "gruesa",
+            "longitud_m": 600,
+            "velocidad_m_s": 2,
+            "coste_s": 300
+          }
+        },
+        {
+          "id": 7,
+          "parent": 6,
+          "nodo": [
+            4,
+            3
+          ],
+          "g": 2050,
+          "h": 650,
+          "f": 2700,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              3
+            ]
+          ],
+          "via": {
+            "a": [
+              3,
+              3
+            ],
+            "b": [
+              4,
+              3
+            ],
+            "tipo": "vertical",
+            "longitud_m": 500,
+            "velocidad_m_s": 1,
+            "coste_s": 500
+          }
+        },
+        {
+          "id": 8,
+          "parent": 7,
+          "nodo": [
+            5,
+            3
+          ],
+          "g": 2450,
+          "h": 450,
+          "f": 2900,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              5,
+              3
+            ]
+          ],
+          "via": {
+            "a": [
+              4,
+              3
+            ],
+            "b": [
+              5,
+              3
+            ],
+            "tipo": "punteada",
+            "longitud_m": 400,
+            "velocidad_m_s": 1,
+            "coste_s": 400
+          }
+        },
+        {
+          "id": 9,
+          "parent": 7,
+          "nodo": [
+            4,
+            4
+          ],
+          "g": 2450,
+          "h": 450,
+          "f": 2900,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "via": {
+            "a": [
+              4,
+              3
+            ],
+            "b": [
+              4,
+              4
+            ],
+            "tipo": "punteada",
+            "longitud_m": 400,
+            "velocidad_m_s": 1,
+            "coste_s": 400
+          }
+        },
+        {
+          "id": 10,
+          "parent": 6,
+          "nodo": [
+            3,
+            2
+          ],
+          "g": 1750,
+          "h": 1100,
+          "f": 2850,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              3,
+              2
+            ]
+          ],
+          "via": {
+            "a": [
+              3,
+              3
+            ],
+            "b": [
+              3,
+              2
+            ],
+            "tipo": "horizontal",
+            "longitud_m": 400,
+            "velocidad_m_s": 2,
+            "coste_s": 200
+          }
+        },
+        {
+          "id": 11,
+          "parent": 5,
+          "nodo": [
+            2,
+            5
+          ],
+          "g": 1700,
+          "h": 750,
+          "f": 2450,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              3
+            ],
+            "b": [
+              2,
+              5
+            ],
+            "tipo": "gruesa",
+            "longitud_m": 900,
+            "velocidad_m_s": 2,
+            "coste_s": 450
+          }
+        },
+        {
+          "id": 12,
+          "parent": 11,
+          "nodo": [
+            3,
+            5
+          ],
+          "g": 2000,
+          "h": 450,
+          "f": 2450,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              5
+            ],
+            "b": [
+              3,
+              5
+            ],
+            "tipo": "gruesa",
+            "longitud_m": 600,
+            "velocidad_m_s": 2,
+            "coste_s": 300
+          }
+        },
+        {
+          "id": 13,
+          "parent": 12,
+          "nodo": [
+            4,
+            5
+          ],
+          "g": 2500,
+          "h": 200,
+          "f": 2700,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "via": {
+            "a": [
+              3,
+              5
+            ],
+            "b": [
+              4,
+              5
+            ],
+            "tipo": "vertical",
+            "longitud_m": 500,
+            "velocidad_m_s": 1,
+            "coste_s": 500
+          }
+        },
+        {
+          "id": 14,
+          "parent": 13,
+          "nodo": [
+            5,
+            5
+          ],
+          "g": 2900,
+          "h": 0,
+          "f": 2900,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              5,
+              5
+            ]
+          ],
+          "via": {
+            "a": [
+              4,
+              5
+            ],
+            "b": [
+              5,
+              5
+            ],
+            "tipo": "vertical",
+            "longitud_m": 400,
+            "velocidad_m_s": 1,
+            "coste_s": 400
+          }
+        },
+        {
+          "id": 15,
+          "parent": 12,
+          "nodo": [
+            3,
+            3
+          ],
+          "g": 2450,
+          "h": 900,
+          "f": 3350,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          "via": {
+            "a": [
+              3,
+              5
+            ],
+            "b": [
+              3,
+              3
+            ],
+            "tipo": "gruesa",
+            "longitud_m": 900,
+            "velocidad_m_s": 2,
+            "coste_s": 450
+          }
+        },
+        {
+          "id": 16,
+          "parent": 4,
+          "nodo": [
+            1,
+            2
+          ],
+          "g": 1450,
+          "h": 1700,
+          "f": 3150,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              2
+            ],
+            "b": [
+              1,
+              2
+            ],
+            "tipo": "punteada",
+            "longitud_m": 600,
+            "velocidad_m_s": 1,
+            "coste_s": 600
+          }
+        }
+      ]
+    },
+    {
+      "iteracion": 6,
+      "umbral": 2850,
+      "siguiente": 2900,
+      "solucion": null,
+      "registros": [
+        {
+          "id": 0,
+          "parent": null,
+          "nodo": [
+            1,
+            1
+          ],
+          "g": 0,
+          "h": 1950,
+          "f": 1950,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ]
+          ],
+          "via": null
+        },
+        {
+          "id": 1,
+          "parent": 0,
+          "nodo": [
+            2,
+            1
+          ],
+          "g": 600,
+          "h": 1650,
+          "f": 2250,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "via": {
+            "a": [
+              1,
+              1
+            ],
+            "b": [
+              2,
+              1
+            ],
+            "tipo": "vertical",
+            "longitud_m": 600,
+            "velocidad_m_s": 1,
+            "coste_s": 600
+          }
+        },
+        {
+          "id": 2,
+          "parent": 1,
+          "nodo": [
+            3,
+            1
+          ],
+          "g": 1200,
+          "h": 1350,
+          "f": 2550,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              1
+            ],
+            "b": [
+              3,
+              1
+            ],
+            "tipo": "vertical",
+            "longitud_m": 600,
+            "velocidad_m_s": 1,
+            "coste_s": 600
+          }
+        },
+        {
+          "id": 3,
+          "parent": 2,
+          "nodo": [
+            5,
+            1
+          ],
+          "g": 1650,
+          "h": 900,
+          "f": 2550,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              5,
+              1
+            ]
+          ],
+          "via": {
+            "a": [
+              3,
+              1
+            ],
+            "b": [
+              5,
+              1
+            ],
+            "tipo": "gruesa",
+            "longitud_m": 900,
+            "velocidad_m_s": 2,
+            "coste_s": 450
+          }
+        },
+        {
+          "id": 4,
+          "parent": 1,
+          "nodo": [
+            2,
+            2
+          ],
+          "g": 850,
+          "h": 1400,
+          "f": 2250,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              1
+            ],
+            "b": [
+              2,
+              2
+            ],
+            "tipo": "horizontal",
+            "longitud_m": 500,
+            "velocidad_m_s": 2,
+            "coste_s": 250
+          }
+        },
+        {
+          "id": 5,
+          "parent": 4,
+          "nodo": [
+            2,
+            3
+          ],
+          "g": 1250,
+          "h": 1200,
+          "f": 2450,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              2
+            ],
+            "b": [
+              2,
+              3
+            ],
+            "tipo": "punteada",
+            "longitud_m": 400,
+            "velocidad_m_s": 1,
+            "coste_s": 400
+          }
+        },
+        {
+          "id": 6,
+          "parent": 5,
+          "nodo": [
+            3,
+            3
+          ],
+          "g": 1550,
+          "h": 900,
+          "f": 2450,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              3
+            ],
+            "b": [
+              3,
+              3
+            ],
+            "tipo": "gruesa",
+            "longitud_m": 600,
+            "velocidad_m_s": 2,
+            "coste_s": 300
+          }
+        },
+        {
+          "id": 7,
+          "parent": 6,
+          "nodo": [
+            4,
+            3
+          ],
+          "g": 2050,
+          "h": 650,
+          "f": 2700,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              3
+            ]
+          ],
+          "via": {
+            "a": [
+              3,
+              3
+            ],
+            "b": [
+              4,
+              3
+            ],
+            "tipo": "vertical",
+            "longitud_m": 500,
+            "velocidad_m_s": 1,
+            "coste_s": 500
+          }
+        },
+        {
+          "id": 8,
+          "parent": 7,
+          "nodo": [
+            5,
+            3
+          ],
+          "g": 2450,
+          "h": 450,
+          "f": 2900,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              5,
+              3
+            ]
+          ],
+          "via": {
+            "a": [
+              4,
+              3
+            ],
+            "b": [
+              5,
+              3
+            ],
+            "tipo": "punteada",
+            "longitud_m": 400,
+            "velocidad_m_s": 1,
+            "coste_s": 400
+          }
+        },
+        {
+          "id": 9,
+          "parent": 7,
+          "nodo": [
+            4,
+            4
+          ],
+          "g": 2450,
+          "h": 450,
+          "f": 2900,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "via": {
+            "a": [
+              4,
+              3
+            ],
+            "b": [
+              4,
+              4
+            ],
+            "tipo": "punteada",
+            "longitud_m": 400,
+            "velocidad_m_s": 1,
+            "coste_s": 400
+          }
+        },
+        {
+          "id": 10,
+          "parent": 6,
+          "nodo": [
+            3,
+            2
+          ],
+          "g": 1750,
+          "h": 1100,
+          "f": 2850,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              3,
+              2
+            ]
+          ],
+          "via": {
+            "a": [
+              3,
+              3
+            ],
+            "b": [
+              3,
+              2
+            ],
+            "tipo": "horizontal",
+            "longitud_m": 400,
+            "velocidad_m_s": 2,
+            "coste_s": 200
+          }
+        },
+        {
+          "id": 11,
+          "parent": 10,
+          "nodo": [
+            3,
+            1
+          ],
+          "g": 2000,
+          "h": 1350,
+          "f": 3350,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "via": {
+            "a": [
+              3,
+              2
+            ],
+            "b": [
+              3,
+              1
+            ],
+            "tipo": "horizontal",
+            "longitud_m": 500,
+            "velocidad_m_s": 2,
+            "coste_s": 250
+          }
+        },
+        {
+          "id": 12,
+          "parent": 5,
+          "nodo": [
+            2,
+            5
+          ],
+          "g": 1700,
+          "h": 750,
+          "f": 2450,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              3
+            ],
+            "b": [
+              2,
+              5
+            ],
+            "tipo": "gruesa",
+            "longitud_m": 900,
+            "velocidad_m_s": 2,
+            "coste_s": 450
+          }
+        },
+        {
+          "id": 13,
+          "parent": 12,
+          "nodo": [
+            3,
+            5
+          ],
+          "g": 2000,
+          "h": 450,
+          "f": 2450,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              5
+            ],
+            "b": [
+              3,
+              5
+            ],
+            "tipo": "gruesa",
+            "longitud_m": 600,
+            "velocidad_m_s": 2,
+            "coste_s": 300
+          }
+        },
+        {
+          "id": 14,
+          "parent": 13,
+          "nodo": [
+            4,
+            5
+          ],
+          "g": 2500,
+          "h": 200,
+          "f": 2700,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "via": {
+            "a": [
+              3,
+              5
+            ],
+            "b": [
+              4,
+              5
+            ],
+            "tipo": "vertical",
+            "longitud_m": 500,
+            "velocidad_m_s": 1,
+            "coste_s": 500
+          }
+        },
+        {
+          "id": 15,
+          "parent": 14,
+          "nodo": [
+            5,
+            5
+          ],
+          "g": 2900,
+          "h": 0,
+          "f": 2900,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              5,
+              5
+            ]
+          ],
+          "via": {
+            "a": [
+              4,
+              5
+            ],
+            "b": [
+              5,
+              5
+            ],
+            "tipo": "vertical",
+            "longitud_m": 400,
+            "velocidad_m_s": 1,
+            "coste_s": 400
+          }
+        },
+        {
+          "id": 16,
+          "parent": 13,
+          "nodo": [
+            3,
+            3
+          ],
+          "g": 2450,
+          "h": 900,
+          "f": 3350,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          "via": {
+            "a": [
+              3,
+              5
+            ],
+            "b": [
+              3,
+              3
+            ],
+            "tipo": "gruesa",
+            "longitud_m": 900,
+            "velocidad_m_s": 2,
+            "coste_s": 450
+          }
+        },
+        {
+          "id": 17,
+          "parent": 4,
+          "nodo": [
+            1,
+            2
+          ],
+          "g": 1450,
+          "h": 1700,
+          "f": 3150,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              2
+            ],
+            "b": [
+              1,
+              2
+            ],
+            "tipo": "punteada",
+            "longitud_m": 600,
+            "velocidad_m_s": 1,
+            "coste_s": 600
+          }
+        }
+      ]
+    },
+    {
+      "iteracion": 7,
+      "umbral": 2900,
+      "siguiente": 3100,
+      "solucion": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "registros": [
+        {
+          "id": 0,
+          "parent": null,
+          "nodo": [
+            1,
+            1
+          ],
+          "g": 0,
+          "h": 1950,
+          "f": 1950,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ]
+          ],
+          "via": null
+        },
+        {
+          "id": 1,
+          "parent": 0,
+          "nodo": [
+            2,
+            1
+          ],
+          "g": 600,
+          "h": 1650,
+          "f": 2250,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "via": {
+            "a": [
+              1,
+              1
+            ],
+            "b": [
+              2,
+              1
+            ],
+            "tipo": "vertical",
+            "longitud_m": 600,
+            "velocidad_m_s": 1,
+            "coste_s": 600
+          }
+        },
+        {
+          "id": 2,
+          "parent": 1,
+          "nodo": [
+            3,
+            1
+          ],
+          "g": 1200,
+          "h": 1350,
+          "f": 2550,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              1
+            ],
+            "b": [
+              3,
+              1
+            ],
+            "tipo": "vertical",
+            "longitud_m": 600,
+            "velocidad_m_s": 1,
+            "coste_s": 600
+          }
+        },
+        {
+          "id": 3,
+          "parent": 2,
+          "nodo": [
+            5,
+            1
+          ],
+          "g": 1650,
+          "h": 900,
+          "f": 2550,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              5,
+              1
+            ]
+          ],
+          "via": {
+            "a": [
+              3,
+              1
+            ],
+            "b": [
+              5,
+              1
+            ],
+            "tipo": "gruesa",
+            "longitud_m": 900,
+            "velocidad_m_s": 2,
+            "coste_s": 450
+          }
+        },
+        {
+          "id": 4,
+          "parent": 1,
+          "nodo": [
+            2,
+            2
+          ],
+          "g": 850,
+          "h": 1400,
+          "f": 2250,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              1
+            ],
+            "b": [
+              2,
+              2
+            ],
+            "tipo": "horizontal",
+            "longitud_m": 500,
+            "velocidad_m_s": 2,
+            "coste_s": 250
+          }
+        },
+        {
+          "id": 5,
+          "parent": 4,
+          "nodo": [
+            2,
+            3
+          ],
+          "g": 1250,
+          "h": 1200,
+          "f": 2450,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              2
+            ],
+            "b": [
+              2,
+              3
+            ],
+            "tipo": "punteada",
+            "longitud_m": 400,
+            "velocidad_m_s": 1,
+            "coste_s": 400
+          }
+        },
+        {
+          "id": 6,
+          "parent": 5,
+          "nodo": [
+            3,
+            3
+          ],
+          "g": 1550,
+          "h": 900,
+          "f": 2450,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              3
+            ],
+            "b": [
+              3,
+              3
+            ],
+            "tipo": "gruesa",
+            "longitud_m": 600,
+            "velocidad_m_s": 2,
+            "coste_s": 300
+          }
+        },
+        {
+          "id": 7,
+          "parent": 6,
+          "nodo": [
+            4,
+            3
+          ],
+          "g": 2050,
+          "h": 650,
+          "f": 2700,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              3
+            ]
+          ],
+          "via": {
+            "a": [
+              3,
+              3
+            ],
+            "b": [
+              4,
+              3
+            ],
+            "tipo": "vertical",
+            "longitud_m": 500,
+            "velocidad_m_s": 1,
+            "coste_s": 500
+          }
+        },
+        {
+          "id": 8,
+          "parent": 7,
+          "nodo": [
+            5,
+            3
+          ],
+          "g": 2450,
+          "h": 450,
+          "f": 2900,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              5,
+              3
+            ]
+          ],
+          "via": {
+            "a": [
+              4,
+              3
+            ],
+            "b": [
+              5,
+              3
+            ],
+            "tipo": "punteada",
+            "longitud_m": 400,
+            "velocidad_m_s": 1,
+            "coste_s": 400
+          }
+        },
+        {
+          "id": 9,
+          "parent": 8,
+          "nodo": [
+            5,
+            2
+          ],
+          "g": 2650,
+          "h": 650,
+          "f": 3300,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              5,
+              2
+            ]
+          ],
+          "via": {
+            "a": [
+              5,
+              3
+            ],
+            "b": [
+              5,
+              2
+            ],
+            "tipo": "horizontal",
+            "longitud_m": 400,
+            "velocidad_m_s": 2,
+            "coste_s": 200
+          }
+        },
+        {
+          "id": 10,
+          "parent": 7,
+          "nodo": [
+            4,
+            4
+          ],
+          "g": 2450,
+          "h": 450,
+          "f": 2900,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "via": {
+            "a": [
+              4,
+              3
+            ],
+            "b": [
+              4,
+              4
+            ],
+            "tipo": "punteada",
+            "longitud_m": 400,
+            "velocidad_m_s": 1,
+            "coste_s": 400
+          }
+        },
+        {
+          "id": 11,
+          "parent": 10,
+          "nodo": [
+            4,
+            5
+          ],
+          "g": 2700,
+          "h": 200,
+          "f": 2900,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "via": {
+            "a": [
+              4,
+              4
+            ],
+            "b": [
+              4,
+              5
+            ],
+            "tipo": "horizontal",
+            "longitud_m": 500,
+            "velocidad_m_s": 2,
+            "coste_s": 250
+          }
+        },
+        {
+          "id": 12,
+          "parent": 11,
+          "nodo": [
+            5,
+            5
+          ],
+          "g": 3100,
+          "h": 0,
+          "f": 3100,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              5,
+              5
+            ]
+          ],
+          "via": {
+            "a": [
+              4,
+              5
+            ],
+            "b": [
+              5,
+              5
+            ],
+            "tipo": "vertical",
+            "longitud_m": 400,
+            "velocidad_m_s": 1,
+            "coste_s": 400
+          }
+        },
+        {
+          "id": 13,
+          "parent": 6,
+          "nodo": [
+            3,
+            2
+          ],
+          "g": 1750,
+          "h": 1100,
+          "f": 2850,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              3,
+              2
+            ]
+          ],
+          "via": {
+            "a": [
+              3,
+              3
+            ],
+            "b": [
+              3,
+              2
+            ],
+            "tipo": "horizontal",
+            "longitud_m": 400,
+            "velocidad_m_s": 2,
+            "coste_s": 200
+          }
+        },
+        {
+          "id": 14,
+          "parent": 13,
+          "nodo": [
+            3,
+            1
+          ],
+          "g": 2000,
+          "h": 1350,
+          "f": 3350,
+          "estado": "poda",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "via": {
+            "a": [
+              3,
+              2
+            ],
+            "b": [
+              3,
+              1
+            ],
+            "tipo": "horizontal",
+            "longitud_m": 500,
+            "velocidad_m_s": 2,
+            "coste_s": 250
+          }
+        },
+        {
+          "id": 15,
+          "parent": 5,
+          "nodo": [
+            2,
+            5
+          ],
+          "g": 1700,
+          "h": 750,
+          "f": 2450,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              3
+            ],
+            "b": [
+              2,
+              5
+            ],
+            "tipo": "gruesa",
+            "longitud_m": 900,
+            "velocidad_m_s": 2,
+            "coste_s": 450
+          }
+        },
+        {
+          "id": 16,
+          "parent": 15,
+          "nodo": [
+            3,
+            5
+          ],
+          "g": 2000,
+          "h": 450,
+          "f": 2450,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "via": {
+            "a": [
+              2,
+              5
+            ],
+            "b": [
+              3,
+              5
+            ],
+            "tipo": "gruesa",
+            "longitud_m": 600,
+            "velocidad_m_s": 2,
+            "coste_s": 300
+          }
+        },
+        {
+          "id": 17,
+          "parent": 16,
+          "nodo": [
+            4,
+            5
+          ],
+          "g": 2500,
+          "h": 200,
+          "f": 2700,
+          "estado": "expande",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "via": {
+            "a": [
+              3,
+              5
+            ],
+            "b": [
+              4,
+              5
+            ],
+            "tipo": "vertical",
+            "longitud_m": 500,
+            "velocidad_m_s": 1,
+            "coste_s": 500
+          }
+        },
+        {
+          "id": 18,
+          "parent": 17,
+          "nodo": [
+            5,
+            5
+          ],
+          "g": 2900,
+          "h": 0,
+          "f": 2900,
+          "estado": "objetivo",
+          "camino": [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              5,
+              5
+            ]
+          ],
+          "via": {
+            "a": [
+              4,
+              5
+            ],
+            "b": [
+              5,
+              5
+            ],
+            "tipo": "vertical",
+            "longitud_m": 400,
+            "velocidad_m_s": 1,
+            "coste_s": 400
+          }
+        }
+      ]
+    }
+  ]
+}
