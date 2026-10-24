@@ -1,0 +1,30 @@
+STAGE 1
+
+javierub@DESKTOP-CHBPSS9$ mpirun --oversubscribe -np 4 ./P4_ga_ring 1
+process 0 best 8589672450 at x=65535 y=65535, first reached after 842 evaluations
+
+process 1 best 8589672450 at x=65535 y=65535, first reached after 880 evaluations
+process 2 best 8589672450 at x=65535 y=65535, first reached after 920 evaluations
+process 3 best 8589672450 at x=65535 y=65535, first reached after 960 evaluations
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 0 after 842 of its 20000 evaluations
+
+STAGE 2
+
+First Table:
+Processes | Seed 1 | Seed 2 | Seed 3 | Seed 4 | Seed 5 | Mean evaluations | Reached maximum | Estimated whole-ring evaluations
+1         | 844    | 1200   | 1138   | 1382   | 838    | 1080.4           | 5/5             | 1080.4
+2         | 570    | 864    | 752    | 910    | 848    | 788.8            | 5/5             | 1577.6
+4         | 842    | 744    | 614    | 622    | 550    | 674.4            | 5/5             | 2697.6
+8         | 638    | 694    | 662    | 538    | 432    | 592.8            | 5/5             | 4742.4
+
+Second Table:
+MIGRATE_EVERY | Seed 1 | Seed 2 | Seed 3 | Seed 4 | Seed 5 | Mean evaluations | Reached maximum | Estimated whole-ring evaluations
+5             | 544    | 614    | 274    | 506    | 544    | 496.4            | 5/5             | 1985.6
+20            | 842    | 744    | 614    | 622    | 550    | 674.4            | 5/5             | 2697.6
+100           | 780    | 986    | 846    | 1024   | 1140   | 955.2            | 5/5             | 3820.8
+
+Adding processes reduced the mean of evaluations needed to reach the maximum, from 1080.4 (1 process) to 592.8 (8 processes), while the estimated total evaluations for the whole ring increased from 1080.4 to 4742.4 because althought the number of evaluations decreases, the number of processes increases more.
+
+In these runs, migrating every 5 generations reached the maximum in fewer evaluations on average (496.4) than every 20 (674.4) or every 100 (955.2), so more frequent migration helped.

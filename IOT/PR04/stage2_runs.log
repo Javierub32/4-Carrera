@@ -1,0 +1,295 @@
+
+=== procesos=1 MIGRATE_EVERY=20 semilla=1 ===
+process 0 best 8589672450 at x=65535 y=65535, first reached after 844 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 0 after 844 of its 20000 evaluations
+
+=== procesos=1 MIGRATE_EVERY=20 semilla=2 ===
+process 0 best 8589672450 at x=65535 y=65535, first reached after 1200 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 0 after 1200 of its 20000 evaluations
+
+=== procesos=1 MIGRATE_EVERY=20 semilla=3 ===
+process 0 best 8589672450 at x=65535 y=65535, first reached after 1138 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 0 after 1138 of its 20000 evaluations
+
+=== procesos=1 MIGRATE_EVERY=20 semilla=4 ===
+process 0 best 8589672450 at x=65535 y=65535, first reached after 1382 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 0 after 1382 of its 20000 evaluations
+
+=== procesos=1 MIGRATE_EVERY=20 semilla=5 ===
+process 0 best 8589672450 at x=65535 y=65535, first reached after 838 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 0 after 838 of its 20000 evaluations
+
+=== procesos=2 MIGRATE_EVERY=20 semilla=1 ===
+process 0 best 8589672450 at x=65535 y=65535, first reached after 600 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 1 after 570 of its 20000 evaluations
+process 1 best 8589672450 at x=65535 y=65535, first reached after 570 evaluations
+
+=== procesos=2 MIGRATE_EVERY=20 semilla=2 ===
+process 0 best 8589672450 at x=65535 y=65535, first reached after 880 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 1 after 864 of its 20000 evaluations
+process 1 best 8589672450 at x=65535 y=65535, first reached after 864 evaluations
+
+=== procesos=2 MIGRATE_EVERY=20 semilla=3 ===
+process 0 best 8589672450 at x=65535 y=65535, first reached after 760 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 1 after 752 of its 20000 evaluations
+process 1 best 8589672450 at x=65535 y=65535, first reached after 752 evaluations
+
+=== procesos=2 MIGRATE_EVERY=20 semilla=4 ===
+process 0 best 8589672450 at x=65535 y=65535, first reached after 910 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 0 after 910 of its 20000 evaluations
+process 1 best 8589672450 at x=65535 y=65535, first reached after 920 evaluations
+
+=== procesos=2 MIGRATE_EVERY=20 semilla=5 ===
+process 0 best 8589672450 at x=65535 y=65535, first reached after 848 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 0 after 848 of its 20000 evaluations
+process 1 best 8589672450 at x=65535 y=65535, first reached after 880 evaluations
+
+=== procesos=4 MIGRATE_EVERY=20 semilla=1 ===
+process 3 best 8589672450 at x=65535 y=65535, first reached after 960 evaluations
+process 0 best 8589672450 at x=65535 y=65535, first reached after 842 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 0 after 842 of its 20000 evaluations
+process 1 best 8589672450 at x=65535 y=65535, first reached after 880 evaluations
+process 2 best 8589672450 at x=65535 y=65535, first reached after 920 evaluations
+
+=== procesos=4 MIGRATE_EVERY=20 semilla=2 ===
+process 0 best 8589672450 at x=65535 y=65535, first reached after 800 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+process 1 best 8589672450 at x=65535 y=65535, first reached after 840 evaluations
+process 2 best 8589672450 at x=65535 y=65535, first reached after 744 evaluations
+process 3 best 8589672450 at x=65535 y=65535, first reached after 760 evaluations
+the maximum possible is 8589672450
+the maximum was first reached by process 2 after 744 of its 20000 evaluations
+
+=== procesos=4 MIGRATE_EVERY=20 semilla=3 ===
+process 3 best 8589672450 at x=65535 y=65535, first reached after 640 evaluations
+process 0 best 8589672450 at x=65535 y=65535, first reached after 672 evaluations
+process 2 best 8589672450 at x=65535 y=65535, first reached after 614 evaluations
+process 1 best 8589672450 at x=65535 y=65535, first reached after 680 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 2 after 614 of its 20000 evaluations
+
+=== procesos=4 MIGRATE_EVERY=20 semilla=4 ===
+process 1 best 8589672450 at x=65535 y=65535, first reached after 720 evaluations
+process 2 best 8589672450 at x=65535 y=65535, first reached after 622 evaluations
+process 3 best 8589672450 at x=65535 y=65535, first reached after 640 evaluations
+process 0 best 8589672450 at x=65535 y=65535, first reached after 680 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 2 after 622 of its 20000 evaluations
+
+=== procesos=4 MIGRATE_EVERY=20 semilla=5 ===
+process 0 best 8589672450 at x=65535 y=65535, first reached after 550 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 0 after 550 of its 20000 evaluations
+process 1 best 8589672450 at x=65535 y=65535, first reached after 560 evaluations
+process 2 best 8589672450 at x=65535 y=65535, first reached after 600 evaluations
+process 3 best 8589672450 at x=65535 y=65535, first reached after 640 evaluations
+
+=== procesos=8 MIGRATE_EVERY=20 semilla=1 ===
+process 5 best 8589672450 at x=65535 y=65535, first reached after 760 evaluations
+process 6 best 8589672450 at x=65535 y=65535, first reached after 788 evaluations
+process 7 best 8589672450 at x=65535 y=65535, first reached after 800 evaluations
+process 0 best 8589672450 at x=65535 y=65535, first reached after 768 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 1 after 638 of its 20000 evaluations
+process 1 best 8589672450 at x=65535 y=65535, first reached after 638 evaluations
+process 2 best 8589672450 at x=65535 y=65535, first reached after 640 evaluations
+process 3 best 8589672450 at x=65535 y=65535, first reached after 680 evaluations
+process 4 best 8589672450 at x=65535 y=65535, first reached after 720 evaluations
+
+=== procesos=8 MIGRATE_EVERY=20 semilla=2 ===
+process 0 best 8589672450 at x=65535 y=65535, first reached after 720 evaluations
+process 2 best 8589672450 at x=65535 y=65535, first reached after 800 evaluations
+process 7 best 8589672450 at x=65535 y=65535, first reached after 720 evaluations
+process 1 best 8589672450 at x=65535 y=65535, first reached after 760 evaluations
+process 4 best 8589672450 at x=65535 y=65535, first reached after 842 evaluations
+process 5 best 8589672450 at x=65535 y=65535, first reached after 694 evaluations
+process 6 best 8589672450 at x=65535 y=65535, first reached after 720 evaluations
+process 3 best 8589672450 at x=65535 y=65535, first reached after 840 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 5 after 694 of its 20000 evaluations
+
+=== procesos=8 MIGRATE_EVERY=20 semilla=3 ===
+process 0 best 8589672450 at x=65535 y=65535, first reached after 720 evaluations
+process 4 best 8589672450 at x=65535 y=65535, first reached after 720 evaluations
+process 5 best 8589672450 at x=65535 y=65535, first reached after 746 evaluations
+process 6 best 8589672450 at x=65535 y=65535, first reached after 760 evaluations
+process 7 best 8589672450 at x=65535 y=65535, first reached after 800 evaluations
+process 1 best 8589672450 at x=65535 y=65535, first reached after 720 evaluations
+process 2 best 8589672450 at x=65535 y=65535, first reached after 662 evaluations
+process 3 best 8589672450 at x=65535 y=65535, first reached after 680 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 2 after 662 of its 20000 evaluations
+
+=== procesos=8 MIGRATE_EVERY=20 semilla=4 ===
+process 4 best 8589672450 at x=65535 y=65535, first reached after 640 evaluations
+process 5 best 8589672450 at x=65535 y=65535, first reached after 538 evaluations
+process 6 best 8589672450 at x=65535 y=65535, first reached after 550 evaluations
+process 7 best 8589672450 at x=65535 y=65535, first reached after 560 evaluations
+process 0 best 8589672450 at x=65535 y=65535, first reached after 600 evaluations
+process 1 best 8589672450 at x=65535 y=65535, first reached after 640 evaluations
+process 3 best 8589672450 at x=65535 y=65535, first reached after 608 evaluations
+process 2 best 8589672450 at x=65535 y=65535, first reached after 680 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 5 after 538 of its 20000 evaluations
+
+=== procesos=8 MIGRATE_EVERY=20 semilla=5 ===
+process 3 best 8589672450 at x=65535 y=65535, first reached after 640 evaluations
+process 6 best 8589672450 at x=65535 y=65535, first reached after 480 evaluations
+process 7 best 8589672450 at x=65535 y=65535, first reached after 520 evaluations
+process 2 best 8589672450 at x=65535 y=65535, first reached after 600 evaluations
+process 0 best 8589672450 at x=65535 y=65535, first reached after 560 evaluations
+process 1 best 8589672450 at x=65535 y=65535, first reached after 586 evaluations
+process 5 best 8589672450 at x=65535 y=65535, first reached after 440 evaluations
+process 4 best 8589672450 at x=65535 y=65535, first reached after 432 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 4 after 432 of its 20000 evaluations
+
+=== procesos=4 MIGRATE_EVERY=5 semilla=1 ===
+process 0 best 8589672450 at x=65535 y=65535, first reached after 550 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 3 after 544 of its 20000 evaluations
+process 1 best 8589672450 at x=65535 y=65535, first reached after 560 evaluations
+process 2 best 8589672450 at x=65535 y=65535, first reached after 570 evaluations
+process 3 best 8589672450 at x=65535 y=65535, first reached after 544 evaluations
+
+=== procesos=4 MIGRATE_EVERY=5 semilla=2 ===
+process 0 best 8589672450 at x=65535 y=65535, first reached after 640 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 1 after 614 of its 20000 evaluations
+process 1 best 8589672450 at x=65535 y=65535, first reached after 614 evaluations
+process 2 best 8589672450 at x=65535 y=65535, first reached after 620 evaluations
+process 3 best 8589672450 at x=65535 y=65535, first reached after 630 evaluations
+
+=== procesos=4 MIGRATE_EVERY=5 semilla=3 ===
+process 0 best 8589672450 at x=65535 y=65535, first reached after 290 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 2 after 274 of its 20000 evaluations
+process 1 best 8589672450 at x=65535 y=65535, first reached after 300 evaluations
+process 2 best 8589672450 at x=65535 y=65535, first reached after 274 evaluations
+process 3 best 8589672450 at x=65535 y=65535, first reached after 280 evaluations
+
+=== procesos=4 MIGRATE_EVERY=5 semilla=4 ===
+process 0 best 8589672450 at x=65535 y=65535, first reached after 510 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 3 after 506 of its 20000 evaluations
+process 1 best 8589672450 at x=65535 y=65535, first reached after 520 evaluations
+process 2 best 8589672450 at x=65535 y=65535, first reached after 530 evaluations
+process 3 best 8589672450 at x=65535 y=65535, first reached after 506 evaluations
+
+=== procesos=4 MIGRATE_EVERY=5 semilla=5 ===
+process 2 best 8589672450 at x=65535 y=65535, first reached after 570 evaluations
+process 3 best 8589672450 at x=65535 y=65535, first reached after 544 evaluations
+process 0 best 8589672450 at x=65535 y=65535, first reached after 550 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 3 after 544 of its 20000 evaluations
+process 1 best 8589672450 at x=65535 y=65535, first reached after 560 evaluations
+
+=== procesos=4 MIGRATE_EVERY=100 semilla=1 ===
+process 0 best 8589672450 at x=65535 y=65535, first reached after 1000 evaluations
+process 3 best 8589672450 at x=65535 y=65535, first reached after 800 evaluations
+process 1 best 8589672450 at x=65535 y=65535, first reached after 1200 evaluations
+process 2 best 8589672450 at x=65535 y=65535, first reached after 780 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 2 after 780 of its 20000 evaluations
+
+=== procesos=4 MIGRATE_EVERY=100 semilla=2 ===
+process 3 best 8589672450 at x=65535 y=65535, first reached after 1140 evaluations
+process 0 best 8589672450 at x=65535 y=65535, first reached after 986 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 0 after 986 of its 20000 evaluations
+process 1 best 8589672450 at x=65535 y=65535, first reached after 1000 evaluations
+process 2 best 8589672450 at x=65535 y=65535, first reached after 1150 evaluations
+
+=== procesos=4 MIGRATE_EVERY=100 semilla=3 ===
+process 2 best 8589672450 at x=65535 y=65535, first reached after 846 evaluations
+process 3 best 8589672450 at x=65535 y=65535, first reached after 972 evaluations
+process 0 best 8589672450 at x=65535 y=65535, first reached after 1000 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 2 after 846 of its 20000 evaluations
+process 1 best 8589672450 at x=65535 y=65535, first reached after 984 evaluations
+
+=== procesos=4 MIGRATE_EVERY=100 semilla=4 ===
+process 1 best 8589672450 at x=65535 y=65535, first reached after 1064 evaluations
+process 2 best 8589672450 at x=65535 y=65535, first reached after 1094 evaluations
+process 3 best 8589672450 at x=65535 y=65535, first reached after 1024 evaluations
+process 0 best 8589672450 at x=65535 y=65535, first reached after 1200 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 3 after 1024 of its 20000 evaluations
+
+=== procesos=4 MIGRATE_EVERY=100 semilla=5 ===
+process 0 best 8589672450 at x=65535 y=65535, first reached after 1400 evaluations
+
+best of the whole ring: 8589672450, found by process 0
+the maximum possible is 8589672450
+the maximum was first reached by process 2 after 1140 of its 20000 evaluations
+process 1 best 8589672450 at x=65535 y=65535, first reached after 1490 evaluations
+process 2 best 8589672450 at x=65535 y=65535, first reached after 1140 evaluations
+process 3 best 8589672450 at x=65535 y=65535, first reached after 1200 evaluations
